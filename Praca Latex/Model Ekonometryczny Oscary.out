@@ -1,0 +1,27 @@
+\BOOKMARK [0][-]{chapter*.2}{Streszczenie}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Wstęp}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{1.\040Podstawy\040teoretyczne\040modelu}{}% 3
+\BOOKMARK [1][-]{section*.5}{1.1 Literatura poruszająca problem}{chapter*.4}% 4
+\BOOKMARK [1][-]{section*.6}{1.2\040Hipotezy\040badawcze}{chapter*.4}% 5
+\BOOKMARK [0][-]{chapter*.7}{2.\040Opis\040zbioru\040danych\040i\040definicje\040zmiennych}{}% 6
+\BOOKMARK [1][-]{section*.8}{2.1\040Baza\040danych}{chapter*.7}% 7
+\BOOKMARK [1][-]{section*.9}{2.2\040Charakterystyka\040zmiennych}{chapter*.7}% 8
+\BOOKMARK [2][-]{section*.10}{2.2.1 Zmienna zależna}{section*.9}% 9
+\BOOKMARK [2][-]{section*.11}{2.2.2 Zmienne niezależne}{section*.9}% 10
+\BOOKMARK [0][-]{chapter*.15}{3.\040Oszacowania\040modeli}{}% 11
+\BOOKMARK [1][-]{section*.16}{3.1 Liniowy Model Prawdopodobieństwa}{chapter*.15}% 12
+\BOOKMARK [1][-]{section*.18}{3.2\040Model\040Logit}{chapter*.15}% 13
+\BOOKMARK [2][-]{section*.19}{3.2.1 Diagnostyka modelu Logit i testy jakości dopasowania}{section*.18}% 14
+\BOOKMARK [1][-]{section*.22}{3.3\040Model\040Probit}{chapter*.15}% 15
+\BOOKMARK [2][-]{section*.23}{3.3.1 Diagnostyka modelu Probit i testy jakości dopasowania}{section*.22}% 16
+\BOOKMARK [1][-]{section*.26}{3.4 Wybór najlepszego modelu}{chapter*.15}% 17
+\BOOKMARK [0][-]{chapter*.28}{4. Interpretacja wyników}{}% 18
+\BOOKMARK [1][-]{section*.29}{4.1. Interpretacja znaków przy parametrach modeli}{chapter*.28}% 19
+\BOOKMARK [1][-]{section*.30}{4.2. Efekty cząstkowe w modelach Logit i Probit}{chapter*.28}% 20
+\BOOKMARK [2][-]{equation.0.0.4}{4.2.1.\040Model\040Logit}{section*.30}% 21
+\BOOKMARK [2][-]{section*.32}{4.2.1.\040Model\040Probit}{section*.30}% 22
+\BOOKMARK [0][-]{chapter*.33}{5. Wnioski końcowe}{}% 23
+\BOOKMARK [0][-]{chapter*.34}{Bibliografia}{}% 24
+\BOOKMARK [0][-]{chapter*.35}{Załączniki}{}% 25
+\BOOKMARK [1][-]{section*.36}{Załącznik 1. Oszacowanie parametrów modeli LMP, Logit i Probit}{chapter*.35}% 26
+\BOOKMARK [1][-]{section*.37}{Załącznik 2. Efekty cząstkowe modeli LMP, Logit i Probit}{chapter*.35}% 27

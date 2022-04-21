@@ -1,0 +1,77 @@
+\ProvidesPackage{strtyt}
+\usepackage[cp1250]{inputenc}				% kodowanie zrodla
+\usepackage[polish]{babel}				% polskie przenoszenie wyrazow (hyph.)
+\usepackage[OT4]{fontenc}					% font PL
+
+%\makeatletter
+
+\def\podtytul#1{\def\@podtytul{#1}}
+\def\promotor#1{\def\@promotor{#1}}
+\def\indeks#1{\def\@indeks{#1}}
+\def\kierunek#1{\def\@kierunek{#1}}
+\def\uniwersytet#1{\def\@uniwersytet{#1}}
+\def\wydzial#1{\def\@wydzial{#1}}
+\def\katedra#1{\def\@katedra{#1}}
+
+\renewcommand{\maketitle} %zmiana komendy maketitle
+{
+\newpage
+\thispagestyle{empty}
+
+%uczelnia,wydział
+\begin{center}\large{
+
+	\@uniwersytet \\
+	\vspace{0.4cm}        							%długość odstępu
+	\@wydzial
+	}
+\end{center}
+
+\vspace{2cm}
+
+\begin{center}
+
+	\normalsize {\@author} \\
+	\vspace{0.4cm}
+	\normalsize {Nr albumu: \@indeks} 
+
+\end{center}
+
+\vspace{1cm}
+
+%tytuł
+\begin{center}
+
+	\large{\textbf{\@title \\
+	\@podtytul}}
+
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+
+\normalsize{Praca na kierunku: \@kierunek}
+
+\end{center}
+
+\vspace{5cm}
+
+% osoba promotora
+\begin{flushright}
+	
+	Praca wykonana pod kierunkiem \\
+	\@promotor \\
+	\@katedra
+
+\end{flushright}
+
+\vspace{3cm}
+
+\begin{center}
+
+	\@date	
+
+\end{center}
+
+}

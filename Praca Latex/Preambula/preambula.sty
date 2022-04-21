@@ -1,0 +1,45 @@
+%**************************************************************************
+%**************************************************************************
+%**************************PREAMBUŁA***************************************
+%**************************************************************************
+%**************************************************************************
+
+%***************************PAKIETY****************************************
+
+\usepackage{StronaTytulowa//strtyt} %mój pakiet ze stroną tytulową
+\usepackage{geometry}				%pakiet potrzebny do marginesów
+\usepackage{stata//stata}			%pakiet potrzeny do formatu staty
+\usepackage{underscore}			%pakiet do właściwej obsługi 
+\usepackage{fontspec}				%pakiet do czcionki - wymaga XeLaTeX
+\usepackage{dcolumn}				% pakiet do tabeli ze staty
+\usepackage{booktabs}				% pakiet do tabeli ze staty
+\usepackage{pdflscape}				% horyzontalny układ strony
+\usepackage{longtable,array}		% tabele na kilka stron
+\usepackage[linktoc=all]{hyperref}  % pakiet do hiperlinków w spisie treści
+\usepackage{titlesec}				% pakiet do  hiperlinków sekcji
+\usepackage{pifont}
+\usepackage{moresize}				% dodaje dwie nowe wielkości czcionki ssmall i HUGE
+\usepackage{mathtools}				% narzędzie do indeksów
+\usepackage{graphicx}			% pakiet do grafik
+\usepackage{caption}			% tytuły nad obrazkami
+\usepackage{floatrow}			% tytuły nad obrazkami
+\usepackage{mathtools}			% narządzi do wzroów
+%**************************************************************************
+
+%*************************USTAWIENIA GLOBALNE******************************
+\setcounter{secnumdepth}{0}			%ustawienia hiperlinków
+\hypersetup{						%ustawienia hiperlinków
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\setmainfont{Times New Roman}					%ustawienia czcionki
+\linespread{1}                    				%pojedynczy odstęp pomiędzy wierszami
+\newgeometry{tmargin=2.5cm, bmargin=2.5cm, lmargin=2.5cm, rmargin=2.5cm}
+%margines
+\pagestyle{plain}								%brak nagłówków w całym dokumencie
+\floatsetup[figure]{capposition=top}			% opisy obrazków na górze rysunku
+\captionsetup{labelfont=bf}
+%**************************************************************************

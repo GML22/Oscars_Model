@@ -1,0 +1,116 @@
+\scriptsize{
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\tabcolsep}{0.2cm}				% definiuje szerokość między kolumnami 
+\renewcommand{\arraystretch}{1}
+
+\begin{longtable}{l*{8}{p{0.5cm}p{2.5cm}}}
+\toprule
+\toprule
+\addlinespace
+&\multicolumn{3}{c}{Logit}&\multicolumn{3}{c}{Probit}&\multicolumn{2}{c}{Liniowy Model Prawdopodobieństwa (LMP)}\\\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-9}&\multicolumn{1}{c}{Logit Ogólny}&\multicolumn{1}{c}{Logit Zagnieżdżony$^{[1]}$}&\multicolumn{1}{c}{Logit po transformacji$^{[2]}$}&\multicolumn{1}{c}{Probit Ogólny}&\multicolumn{1}{c}{Probit Zagnieżdżony}&\multicolumn{1}{c}{Probit po transformacji}&\multicolumn{1}{c}{LMP Ogólny}&\multicolumn{1}{c}{LMP Zagnieżdżony}\\
+\addlinespace
+\midrule
+\midrule
+\addlinespace
+\multicolumn{1}{c}{budzet2000} & \multicolumn{1}{c}{-2.59e-09} &&& \multicolumn{1}{c}{-2.05e-09} &&& \multicolumn{1}{c}{-7.00e-11} &\\
+& \multicolumn{1}{c}{(4.67e-09)} &&& \multicolumn{1}{c}{(2.36e-09)} && & \multicolumn{1}{c}{(1.83e-10)} & \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_1} & \multicolumn{1}{c}{-0.237} &&& \multicolumn{1}{c}{-0.138} &&& \multicolumn{1}{c}{-0.0118} & \\
+ & \multicolumn{1}{c}{(0.483)} &&& \multicolumn{1}{c}{(0.228)} &&& \multicolumn{1}{c}{ (0.0164)} &\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_2} & \multicolumn{1}{c}{0.947} & \multicolumn{1}{c}{\textbf{1.099\sym{***}}$^{[4]}$} & \multicolumn{1}{c}{\textbf{1.299\sym{***}}} & \multicolumn{1}{c}{0.473} & \multicolumn{1}{c}{\textbf{0.539\sym{**}}} & \multicolumn{1}{c}{\textbf{0.658\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0668\sym{**}}} & \multicolumn{1}{c}{\textbf{0.0756\sym{***}}}\\
+ & \multicolumn{1}{c}{(0.607)} & \multicolumn{1}{c}{(0.419)} & \multicolumn{1}{c}{(0.410)} & \multicolumn{1}{c}{(0.312)} & \multicolumn{1}{c}{(0.227)} & \multicolumn{1}{c}{(0.213)} & \multicolumn{1}{c}{ (0.0302)} & \multicolumn{1}{c}{ (0.0252)}\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_3} & \multicolumn{1}{c}{0.816} &&& \multicolumn{1}{c}{0.343} &&& \multicolumn{1}{c}{0.0291} &\\
+ & \multicolumn{1}{c}{(0.639)} &&& \multicolumn{1}{c}{(0.335)} &&& \multicolumn{1}{c}{ (0.0302)} &\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_4} & \multicolumn{1}{c}{-0.587} & & & \multicolumn{1}{c}{-0.288} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-0.0369} &\\
+ & \multicolumn{1}{c}{(0.791)} & && \multicolumn{1}{c}{(0.398)} & & & \multicolumn{1}{c}{ (0.0287)} &\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_5} & \multicolumn{1}{c}{0.413} &&& \multicolumn{1}{c}{0.193} && & \multicolumn{1}{c}{0.0179} &\\
+ & \multicolumn{1}{c}{(0.602)} & && \multicolumn{1}{c}{(0.296)} &&& \multicolumn{1}{c}{ (0.0241)} &\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_6} & \multicolumn{1}{c}{0.900} &&& \multicolumn{1}{c}{0.383} &&& \multicolumn{1}{c}{\textbf{0.0453\sym{*}}} & \multicolumn{1}{c}{\textbf{0.0504\sym{**}}} \\
+ & \multicolumn{1}{c}{(0.585)} &&& \multicolumn{1}{c}{(0.298)} & && \multicolumn{1}{c}{ (0.0272)} & \multicolumn{1}{c}{ (0.0249) }\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_7} & \multicolumn{1}{c}{0.014} &&& \multicolumn{1}{c}{-0.0401} &&& \multicolumn{1}{c}{0.00251} & \\
+& \multicolumn{1}{c}{(0.620)} &&& \multicolumn{1}{c}{(0.313)} & && \multicolumn{1}{c}{ (0.0242)} &\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_8} & \multicolumn{1}{c}{0.09692} & && \multicolumn{1}{c}{-0.0275} && & \multicolumn{1}{c}{ -0.00506} &\\
+& \multicolumn{1}{c}{(0.813)} && & \multicolumn{1}{c}{(0.385)} & & & \multicolumn{1}{c}{ (0.0256)} &\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_9} & \multicolumn{1}{c}{-0.493} &&& \multicolumn{1}{c}{-0.300} &&& \multicolumn{1}{c}{-0.0411} &\\
+ & \multicolumn{1}{c}{(1.192)} &&& \multicolumn{1}{c}{(0.611)} &&& \multicolumn{1}{c}{ (0.0356)} & \\
+\addlinespace
+\multicolumn{1}{c}{ekranizacja} & \multicolumn{1}{c}{-0.144} && & \multicolumn{1}{c}{-0.0508} &&& \multicolumn{1}{c}{ -0.00985} & \\
+ & \multicolumn{1}{c}{(0.288)} & & & \multicolumn{1}{c}{(0.144)} && & \multicolumn{1}{c}{ (0.0129)} &\\
+\addlinespace
+\multicolumn{1}{c}{roi} & \multicolumn{1}{c}{-0.000133} && & \multicolumn{1}{c}{-0.0000484} &&& \multicolumn{1}{c}{-1.70e-08} & \\
+& \multicolumn{1}{c}{ (0.0000994)} & & & \multicolumn{1}{c}{ (0.0000469)} &&& \multicolumn{1}{c}{(0.000000162)} &\\
+\addlinespace
+\multicolumn{1}{c}{przychody2000} & \multicolumn{1}{c}{\textbf{2.11e-09\sym{**}}} & \multicolumn{1}{c}{\textbf{1.31e-09\sym{***}}} & \multicolumn{1}{c}{\textbf{9.58e-10\sym{**}}} & \multicolumn{1}{c}{\textbf{1.03e-09\sym{**}}} & \multicolumn{1}{c}{\textbf{6.53e-10\sym{***}}} & \multicolumn{1}{c}{\textbf{4.70e-10\sym{**}}} & \multicolumn{1}{c}{ 4.52e-11} & \\
+& \multicolumn{1}{c}{(8.44e-10)} & \multicolumn{1}{c}{(4.83e-10)} & \multicolumn{1}{c}{(4.65e-10)} & \multicolumn{1}{c}{(4.26e-10)} & \multicolumn{1}{c}{(2.34e-10)} & \multicolumn{1}{c}{(2.25e-10)} & \multicolumn{1}{c}{(2.77e-11)} &\\
+\addlinespace
+\multicolumn{1}{c}{kraj\_prod} & \multicolumn{1}{c}{\textbf{-0.731\sym{***}}} & \multicolumn{1}{c}{\textbf{-0.735\sym{***}}} & \multicolumn{1}{c}{\textbf{-0.680\sym{***}}} & \multicolumn{1}{c}{\textbf{-0.374\sym{***}}} & \multicolumn{1}{c}{\textbf{-0.381\sym{***}}} & \multicolumn{1}{c}{\textbf{-0.368\sym{***}}} & \multicolumn{1}{c}{\textbf{-0.0278\sym{**}}} & \multicolumn{1}{c}{\textbf{-0.0262\sym{**}}} \\
+& \multicolumn{1}{c}{(0.277)} & \multicolumn{1}{c}{(0.265)} & \multicolumn{1}{c}{(0.242)} & \multicolumn{1}{c}{(0.137)} & \multicolumn{1}{c}{(0.131)} & \multicolumn{1}{c}{(0.120)} & \multicolumn{1}{c}{ (0.0113)} & \multicolumn{1}{c}{ (0.0110) }\\
+\addlinespace
+\multicolumn{1}{c}{nominacje} & \multicolumn{1}{c}{\textbf{0.718\sym{***}}} & \multicolumn{1}{c}{\textbf{0.677\sym{***}}} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\textbf{0.384\sym{***}}} & \multicolumn{1}{c}{\textbf{0.368\sym{***}}} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\textbf{0.0812\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0826\sym{***}}}\\
+& \multicolumn{1}{c}{ (0.0710)} & \multicolumn{1}{c}{ (0.0602)} & & \multicolumn{1}{c}{ (0.0355)} & \multicolumn{1}{c}{ (0.0307)} & & \multicolumn{1}{c}{(0.00367)} & \multicolumn{1}{c}{(0.00345) }\\
+\addlinespace
+\addlinespace
+\addlinespace
+\multicolumn{1}{c}{zlote\_globy} & \multicolumn{1}{c}{\textbf{1.709\sym{***}}} & \multicolumn{1}{c}{\textbf{1.642\sym{***}}} & & \multicolumn{1}{c}{\textbf{0.806\sym{***}}} & \multicolumn{1}{c}{\textbf{0.795\sym{***}}} && \multicolumn{1}{c}{\textbf{0.0748\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0748\sym{***}}}\\
+ & \multicolumn{1}{c}{(0.283)} & \multicolumn{1}{c}{(0.265)} & & \multicolumn{1}{c}{(0.132)} & \multicolumn{1}{c}{(0.127)} & & \multicolumn{1}{c}{ (0.0108)} & \multicolumn{1}{c}{ (0.0107)}\\
+\addlinespace
+\multicolumn{1}{c}{bafta} & \multicolumn{1}{c}{\textbf{0.720\sym{***}}} & \multicolumn{1}{c}{\textbf{0.766\sym{***}}} & & \multicolumn{1}{c}{\textbf{0.373\sym{***}}} & \multicolumn{1}{c}{\textbf{0.398\sym{***}}} & & \multicolumn{1}{c}{\textbf{0.0485\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0491\sym{***}}}\\
+& \multicolumn{1}{c}{(0.171)} & \multicolumn{1}{c}{(0.169)} && \multicolumn{1}{c}{ (0.0859)} & \multicolumn{1}{c}{ (0.0842)} & & \multicolumn{1}{c}{(0.00864)} & \multicolumn{1}{c}{(0.00856) }\\
+\addlinespace
+\multicolumn{1}{c}{milosc} & \multicolumn{1}{c}{\textbf{1.216\sym{***}}} & \multicolumn{1}{c}{\textbf{1.040\sym{***}}} & \multicolumn{1}{c}{\textbf{1.077\sym{***}}} & \multicolumn{1}{c}{\textbf{0.578\sym{***}}} & \multicolumn{1}{c}{\textbf{0.515\sym{***}}} & \multicolumn{1}{c}{\textbf{0.521\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0558\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0496\sym{**}}} \\ & \multicolumn{1}{c}{(0.397)} & \multicolumn{1}{c}{(0.374)} & \multicolumn{1}{c}{(0.354)} & \multicolumn{1}{c}{(0.204)} & \multicolumn{1}{c}{(0.195)} & \multicolumn{1}{c}{(0.181)} & \multicolumn{1}{c}{ (0.0202)} & \multicolumn{1}{c}{(0.0199)}\\
+\addlinespace
+\multicolumn{1}{c}{czas\_trwania} & \multicolumn{1}{c}{ -0.00665} &&& \multicolumn{1}{c}{ -0.00361} & & & \multicolumn{1}{c}{\textbf{-0.00076\sym{**}}} & \multicolumn{1}{c}{\textbf{-0.000737\sym{***}}}\\
+& \multicolumn{1}{c}{(0.008001)} && & \multicolumn{1}{c}{(0.00399)} &&& \multicolumn{1}{c}{(0.000329)} & \multicolumn{1}{c}{(0.000282)}\\
+\addlinespace
+\addlinespace
+\multicolumn{1}{c}{ln_nom} &&& \multicolumn{1}{c}{\textbf{2.438\sym{***}}} &&& \multicolumn{1}{c}{\textbf{1.330\sym{***}}} &&\\
+&&& \multicolumn{1}{c}{(0.166)} & & & \multicolumn{1}{c}{(0.0861)} &&\\
+\addlinespace
+\multicolumn{1}{c}{ln_zg } & && \multicolumn{1}{c}{\textbf{1.914\sym{***}}} & && \multicolumn{1}{c}{\textbf{1.042\sym{***}}} &&\\
+&&& \multicolumn{1}{c}{(0.710)} &&& \multicolumn{1}{c}{(0.359)} &&\\
+\addlinespace
+\multicolumn{1}{c}{ln_baf } &&& \multicolumn{1}{c}{\textbf{1.620\sym{***}}} && & \multicolumn{1}{c}{\textbf{0.894\sym{***}}} &&\\
+&&& \multicolumn{1}{c}{(0.420)} & & & \multicolumn{1}{c}{(0.219)} &&\\
+\addlinespace
+\multicolumn{1}{c}{_cons} & \multicolumn{1}{c}{\textbf{-3.414\sym{***}}} & \multicolumn{1}{c}{\textbf{-4.076\sym{***}}} & \multicolumn{1}{c}{\textbf{-3.708\sym{***}}} & \multicolumn{1}{c}{\textbf{-1.793\sym{***}}} & \multicolumn{1}{c}{\textbf{-2.213\sym{***}}} & \multicolumn{1}{c}{\textbf{-1.995\sym{***}}} & \multicolumn{1}{c}{\textbf{0.103\sym{***}}} & \multicolumn{1}{c}{\textbf{0.0991\sym{***}}} \\
+& \multicolumn{1}{c}{(0.964)} & \multicolumn{1}{c}{(0.238)} & \multicolumn{1}{c}{(0.214)} & \multicolumn{1}{c}{(0.476)} & \multicolumn{1}{c}{(0.110)} & \multicolumn{1}{c}{(0.0969)} & \multicolumn{1}{c}{ (0.0388)} & \multicolumn{1}{c}{ (0.0327)}\\
+\addlinespace
+\midrule
+\addlinespace
+\multicolumn{1}{c}{Liczba Obserwacji} & \multicolumn{1}{c}{1638} & \multicolumn{1}{c}{1657} & \multicolumn{1}{c}{1657} & \multicolumn{1}{c}{1638} & \multicolumn{1}{c}{1657} & \multicolumn{1}{c}{1657} & \multicolumn{1}{c}{1638} & \multicolumn{1}{c}{1663}\\
+\addlinespace
+\multicolumn{1}{c}{Skorygowane \(R^{2}\)} &&&&&&& \multicolumn{1}{c}{0.593} & \multicolumn{1}{c}{0.591}\\
+\addlinespace
+\multicolumn{1}{c}{Pseudo \(R^{2}\) } & \multicolumn{1}{c}{0.0.634} & \multicolumn{1}{c}{0.624} & \multicolumn{1}{c}{0.562} & \multicolumn{1}{c}{0.639} & \multicolumn{1}{c}{0.630} & \multicolumn{1}{c}{0.565} &&\\
+\addlinespace
+\multicolumn{1}{c}{\textit{AIC}} & \multicolumn{1}{c}{ 511.6} & \multicolumn{1}{c}{506.8} & \multicolumn{1}{c}{588.2} & \multicolumn{1}{c}{ 505.1} & \multicolumn{1}{c}{496.5} & \multicolumn{1}{c}{582.1} & \multicolumn{1}{c}{-332.6} & \multicolumn{1}{c}{-343.0} \\
+\addlinespace
+\multicolumn{1}{c}{\textit{BIC}} & \multicolumn{1}{c}{619.6} & \multicolumn{1}{c}{550.1} & \multicolumn{1}{c}{631.5} & \multicolumn{1}{c}{605.8} & \multicolumn{1}{c}{534.4} & \multicolumn{1}{c}{620.0} & \multicolumn{1}{c}{-233.0} & \multicolumn{1}{c}{-294.2}\\
+\addlinespace
+\multicolumn{1}{c}{Log Wiarygodności} & \multicolumn{1}{c}{-235.8} & \multicolumn{1}{c}{-245.4} & \multicolumn{1}{c}{-286.1} & \multicolumn{1}{c}{-232.6} & \multicolumn{1}{c}{-241.3} & \multicolumn{1}{c}{-284.1} & \multicolumn{1}{c}{186.2} & \multicolumn{1}{c}{180.5}\\
+\addlinespace
+\multicolumn{1}{c}{Chi-kwadrat} & \multicolumn{1}{c}{817.8} & \multicolumn{1}{c}{814.5} & \multicolumn{1}{c}{733.2} & \multicolumn{1}{c}{823.5} & \multicolumn{1}{c}{822.8} & \multicolumn{1}{c}{737.2} & \multicolumn{1}{c}{} &\\
+\addlinespace
+\multicolumn{1}{c}{Statystyka F} &&&&&&& \multicolumn{1}{c}{120.1} & \multicolumn{1}{c}{300.7 }\\
+\addlinespace
+\bottomrule
+\bottomrule
+\addlinespace
+\multicolumn{9}{l}{\scriptsize [1] Modele zagnieżdżone oznaczają ostatnie modele otrzymane po zastosowaniu procedury od ogólnego do szczegółowego.}\\
+\multicolumn{9}{l}{\scriptsize [2] Modele po transformacji oznaczają modele powstałe po transformacji zmiennych nominacje, zlote_globy, bafta na zmienne zlogarytmowane ln_nom, ln_zg, ln_baf.}\\
+\multicolumn{9}{l}{\scriptsize [3] W nawiasie znajdują się wartości odchyleń standardowych uzyskanych parametrów.}\\
+\multicolumn{9}{l}{\scriptsize [4] Liczba gwiazdek przy zmiennej oznacza, że dana zmienna jest istotna na odpowiednim poziomie istotności: 10\% (\sym{*}), 5\% (\sym{**}), 1\% (\sym{***}).}\\ 
+\addlinespace
+\multicolumn{9}{l}{\scriptsize Źródło: Opracowanie własne.}\\
+\end{longtable}
+}
+}

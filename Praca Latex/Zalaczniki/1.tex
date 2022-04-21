@@ -1,0 +1,333 @@
+\begin{stlog}
+
+. xi: reg oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1638
+\HLI{13}{\PLUS}\HLI{30}           F( 19,  1618) =  126.33
+       Model {\VBAR}  113.326224    19  5.96453809           Prob > F      =  0.0000
+    Residual {\VBAR}  76.3935565  1618  .047214806           R-squared     =  0.5973
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5926
+       Total {\VBAR}   189.71978  1637  .115894795           Root MSE      =  .21729
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -7.00e-11   1.83e-10    -0.38   0.703    -4.30e-10    2.90e-10
+   _Igatunek_1 {\VBAR}  -.0109619   .0164266    -0.67   0.505    -.0431815    .0212578
+   _Igatunek_2 {\VBAR}   .0653794   .0302081     2.16   0.031     .0061283    .1246306
+   _Igatunek_3 {\VBAR}   .0277427   .0301426     0.92   0.358    -.0313799    .0868654
+   _Igatunek_4 {\VBAR}  -.0364617   .0286802    -1.27   0.204    -.0927159    .0197925
+   _Igatunek_5 {\VBAR}   .0179434   .0240767     0.75   0.456    -.0292814    .0651683
+   _Igatunek_6 {\VBAR}   .0440391   .0271553     1.62   0.105    -.0092242    .0973023
+   _Igatunek_7 {\VBAR}   .0028486   .0241708     0.12   0.906    -.0445608    .0502579
+   _Igatunek_8 {\VBAR}  -.0056704   .0255728    -0.22   0.825    -.0558297    .0444888
+   _Igatunek_9 {\VBAR}  -.0388769   .0355595    -1.09   0.274    -.1086245    .0308706
+   ekranizacja {\VBAR}  -.0099141   .0128952    -0.77   0.442    -.0352071     .015379
+           roi {\VBAR}  -1.84e-08   1.62e-07    -0.11   0.910    -3.37e-07    3.00e-07
+ przychody2000 {\VBAR}   4.56e-11   2.77e-11     1.65   0.100    -8.70e-12    9.99e-11
+kraj_produkcji {\VBAR}  -.0277771   .0113187    -2.45   0.014    -.0499779   -.0055763
+     nominacje {\VBAR}   .0812346    .003667    22.15   0.000     .0740421    .0884271
+   zlote_globy {\VBAR}   .0745881   .0108014     6.91   0.000      .053402    .0957743
+         bafta {\VBAR}   .0487341   .0086398     5.64   0.000     .0317878    .0656804
+        milosc {\VBAR}   .0559628   .0201809     2.77   0.006     .0163793    .0955463
+  czas_trwania {\VBAR}  -.0007682   .0003289    -2.34   0.020    -.0014133   -.0001231
+         _cons {\VBAR}   .1058333   .0387433     2.73   0.006      .029841    .1818256
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. //chce usunac zmienna _Igatunek_7
+. test _Igatunek_7
+{\smallskip}
+ ( 1)  _Igatunek_7 = 0
+{\smallskip}
+       F(  1,  1618) =    0.01
+            Prob > F =    0.9062
+{\smallskip}
+. //usuwamy zmienna _Igatunek_7 z modelu
+. 
+. //Model 2:
+. reg oscar  budzet2000 _Igatunek_1 _Igatunek_2 _Igatunek_3 _Igatunek_4 _Igatunek_5 _Igatunek_6 _Igatunek_8
+ _Igatunek_9 ekranizacja kraj_prod roi przychody2000 nominacje zlote_globy bafta milosc czas_trwania
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1638
+\HLI{13}{\PLUS}\HLI{30}           F( 18,  1619) =  133.43
+       Model {\VBAR}  113.325568    18  6.29586489           Prob > F      =  0.0000
+    Residual {\VBAR}  76.3942123  1619  .047186048           R-squared     =  0.5973
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5929
+       Total {\VBAR}   189.71978  1637  .115894795           Root MSE      =  .21722
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -6.89e-11   1.83e-10    -0.38   0.707    -4.28e-10    2.90e-10
+   _Igatunek_1 {\VBAR}    -.01151   .0157496    -0.73   0.465    -.0424018    .0193818
+   _Igatunek_2 {\VBAR}   .0647185    .029674     2.18   0.029     .0065151     .122922
+   _Igatunek_3 {\VBAR}   .0272022   .0297826     0.91   0.361    -.0312142    .0856187
+   _Igatunek_4 {\VBAR}  -.0369912   .0283173    -1.31   0.192    -.0925337    .0185513
+   _Igatunek_5 {\VBAR}     .01738   .0235901     0.74   0.461    -.0288904    .0636503
+   _Igatunek_6 {\VBAR}   .0434954   .0267524     1.63   0.104    -.0089775    .0959682
+   _Igatunek_8 {\VBAR}   -.006216   .0251426    -0.25   0.805    -.0555315    .0430995
+   _Igatunek_9 {\VBAR}  -.0392716   .0353907    -1.11   0.267     -.108688    .0301447
+   ekranizacja {\VBAR}  -.0099414   .0128892    -0.77   0.441    -.0352226    .0153398
+kraj_produkcji {\VBAR}  -.0277465   .0113122    -2.45   0.014    -.0499346   -.0055583
+           roi {\VBAR}  -1.85e-08   1.62e-07    -0.11   0.909    -3.36e-07    2.99e-07
+ przychody2000 {\VBAR}   4.58e-11   2.76e-11     1.66   0.097    -8.36e-12    1.00e-10
+     nominacje {\VBAR}   .0812015   .0036551    22.22   0.000     .0740323    .0883706
+   zlote_globy {\VBAR}   .0745675   .0107967     6.91   0.000     .0533906    .0957445
+         bafta {\VBAR}   .0487321   .0086371     5.64   0.000     .0317909    .0656732
+        milosc {\VBAR}   .0557552   .0200978     2.77   0.006     .0163348    .0951756
+  czas_trwania {\VBAR}  -.0007716   .0003275    -2.36   0.019     -.001414   -.000129
+         _cons {\VBAR}   .1066722   .0380721     2.80   0.005     .0319965     .181348
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. //chce usunac zmienna roi
+. //Model ogolny:
+. xi: reg oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1638
+\HLI{13}{\PLUS}\HLI{30}           F( 19,  1618) =  126.33
+       Model {\VBAR}  113.326224    19  5.96453809           Prob > F      =  0.0000
+    Residual {\VBAR}  76.3935565  1618  .047214806           R-squared     =  0.5973
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5926
+       Total {\VBAR}   189.71978  1637  .115894795           Root MSE      =  .21729
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -7.00e-11   1.83e-10    -0.38   0.703    -4.30e-10    2.90e-10
+   _Igatunek_1 {\VBAR}  -.0109619   .0164266    -0.67   0.505    -.0431815    .0212578
+   _Igatunek_2 {\VBAR}   .0653794   .0302081     2.16   0.031     .0061283    .1246306
+   _Igatunek_3 {\VBAR}   .0277427   .0301426     0.92   0.358    -.0313799    .0868654
+   _Igatunek_4 {\VBAR}  -.0364617   .0286802    -1.27   0.204    -.0927159    .0197925
+   _Igatunek_5 {\VBAR}   .0179434   .0240767     0.75   0.456    -.0292814    .0651683
+   _Igatunek_6 {\VBAR}   .0440391   .0271553     1.62   0.105    -.0092242    .0973023
+   _Igatunek_7 {\VBAR}   .0028486   .0241708     0.12   0.906    -.0445608    .0502579
+   _Igatunek_8 {\VBAR}  -.0056704   .0255728    -0.22   0.825    -.0558297    .0444888
+   _Igatunek_9 {\VBAR}  -.0388769   .0355595    -1.09   0.274    -.1086245    .0308706
+   ekranizacja {\VBAR}  -.0099141   .0128952    -0.77   0.442    -.0352071     .015379
+           roi {\VBAR}  -1.84e-08   1.62e-07    -0.11   0.910    -3.37e-07    3.00e-07
+ przychody2000 {\VBAR}   4.56e-11   2.77e-11     1.65   0.100    -8.70e-12    9.99e-11
+kraj_produkcji {\VBAR}  -.0277771   .0113187    -2.45   0.014    -.0499779   -.0055763
+     nominacje {\VBAR}   .0812346    .003667    22.15   0.000     .0740421    .0884271
+   zlote_globy {\VBAR}   .0745881   .0108014     6.91   0.000      .053402    .0957743
+         bafta {\VBAR}   .0487341   .0086398     5.64   0.000     .0317878    .0656804
+        milosc {\VBAR}   .0559628   .0201809     2.77   0.006     .0163793    .0955463
+  czas_trwania {\VBAR}  -.0007682   .0003289    -2.34   0.020    -.0014133   -.0001231
+         _cons {\VBAR}   .1058333   .0387433     2.73   0.006      .029841    .1818256
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. test _Igatunek_7 roi
+{\smallskip}
+ ( 1)  _Igatunek_7 = 0
+ ( 2)  roi = 0
+{\smallskip}
+       F(  2,  1618) =    0.01
+            Prob > F =    0.9866
+{\smallskip}
+. //usuwamy zmienna roi z modelu
+. 
+. //Model 3:
+. reg oscar  budzet2000 _Igatunek_1 _Igatunek_2 _Igatunek_3 _Igatunek_4 _Igatunek_5 _Igatunek_6 _Igatunek_8
+ _Igatunek_9 ekranizacja kraj_prod przychody2000 nominacje zlote_globy bafta milosc czas_trwania
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1638
+\HLI{13}{\PLUS}\HLI{30}           F( 17,  1620) =  141.36
+       Model {\VBAR}  113.324953    17  6.66617371           Prob > F      =  0.0000
+    Residual {\VBAR}  76.3948271  1620  .047157301           R-squared     =  0.5973
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5931
+       Total {\VBAR}   189.71978  1637  .115894795           Root MSE      =  .21716
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -6.81e-11   1.83e-10    -0.37   0.710    -4.27e-10    2.91e-10
+   _Igatunek_1 {\VBAR}  -.0114878   .0157436    -0.73   0.466    -.0423678    .0193922
+   _Igatunek_2 {\VBAR}   .0647429   .0296642     2.18   0.029     .0065588    .1229271
+   _Igatunek_3 {\VBAR}   .0272146   .0297733     0.91   0.361    -.0311836    .0856128
+   _Igatunek_4 {\VBAR}  -.0369993   .0283086    -1.31   0.191    -.0925246    .0185261
+   _Igatunek_5 {\VBAR}   .0173782   .0235829     0.74   0.461     -.028878    .0636344
+   _Igatunek_6 {\VBAR}   .0434932   .0267442     1.63   0.104    -.0089637      .09595
+   _Igatunek_8 {\VBAR}  -.0065429   .0249714    -0.26   0.793    -.0555226    .0424368
+   _Igatunek_9 {\VBAR}  -.0392751   .0353799    -1.11   0.267    -.1086702    .0301201
+   ekranizacja {\VBAR}  -.0099296   .0128848    -0.77   0.441    -.0352023    .0153431
+kraj_produkcji {\VBAR}   -.027783   .0113043    -2.46   0.014    -.0499555   -.0056104
+ przychody2000 {\VBAR}   4.57e-11   2.76e-11     1.66   0.098    -8.43e-12    9.98e-11
+     nominacje {\VBAR}   .0812034   .0036539    22.22   0.000     .0740365    .0883703
+   zlote_globy {\VBAR}   .0745727   .0107933     6.91   0.000     .0534024    .0957429
+         bafta {\VBAR}   .0487248   .0086343     5.64   0.000     .0317893    .0656604
+        milosc {\VBAR}    .055756   .0200917     2.78   0.006     .0163476    .0951643
+  czas_trwania {\VBAR}   -.000771   .0003273    -2.36   0.019     -.001413   -.0001289
+         _cons {\VBAR}   .1065823   .0380523     2.80   0.005     .0319453    .1812192
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. //chce usunac zmienna _Igatunek_8
+. //Model ogolny:
+. xi: reg oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1638
+\HLI{13}{\PLUS}\HLI{30}           F( 19,  1618) =  126.33
+       Model {\VBAR}  113.326224    19  5.96453809           Prob > F      =  0.0000
+    Residual {\VBAR}  76.3935565  1618  .047214806           R-squared     =  0.5973
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5926
+       Total {\VBAR}   189.71978  1637  .115894795           Root MSE      =  .21729
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -7.00e-11   1.83e-10    -0.38   0.703    -4.30e-10    2.90e-10
+   _Igatunek_1 {\VBAR}  -.0109619   .0164266    -0.67   0.505    -.0431815    .0212578
+   _Igatunek_2 {\VBAR}   .0653794   .0302081     2.16   0.031     .0061283    .1246306
+   _Igatunek_3 {\VBAR}   .0277427   .0301426     0.92   0.358    -.0313799    .0868654
+   _Igatunek_4 {\VBAR}  -.0364617   .0286802    -1.27   0.204    -.0927159    .0197925
+   _Igatunek_5 {\VBAR}   .0179434   .0240767     0.75   0.456    -.0292814    .0651683
+   _Igatunek_6 {\VBAR}   .0440391   .0271553     1.62   0.105    -.0092242    .0973023
+   _Igatunek_7 {\VBAR}   .0028486   .0241708     0.12   0.906    -.0445608    .0502579
+   _Igatunek_8 {\VBAR}  -.0056704   .0255728    -0.22   0.825    -.0558297    .0444888
+   _Igatunek_9 {\VBAR}  -.0388769   .0355595    -1.09   0.274    -.1086245    .0308706
+   ekranizacja {\VBAR}  -.0099141   .0128952    -0.77   0.442    -.0352071     .015379
+           roi {\VBAR}  -1.84e-08   1.62e-07    -0.11   0.910    -3.37e-07    3.00e-07
+ przychody2000 {\VBAR}   4.56e-11   2.77e-11     1.65   0.100    -8.70e-12    9.99e-11
+kraj_produkcji {\VBAR}  -.0277771   .0113187    -2.45   0.014    -.0499779   -.0055763
+     nominacje {\VBAR}   .0812346    .003667    22.15   0.000     .0740421    .0884271
+   zlote_globy {\VBAR}   .0745881   .0108014     6.91   0.000      .053402    .0957743
+         bafta {\VBAR}   .0487341   .0086398     5.64   0.000     .0317878    .0656804
+        milosc {\VBAR}   .0559628   .0201809     2.77   0.006     .0163793    .0955463
+  czas_trwania {\VBAR}  -.0007682   .0003289    -2.34   0.020    -.0014133   -.0001231
+         _cons {\VBAR}   .1058333   .0387433     2.73   0.006      .029841    .1818256
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. test _Igatunek_7 roi _Igatunek_8
+{\smallskip}
+ ( 1)  _Igatunek_7 = 0
+ ( 2)  roi = 0
+ ( 3)  _Igatunek_8 = 0
+{\smallskip}
+       F(  3,  1618) =    0.03
+            Prob > F =    0.9924
+{\smallskip}
+. //usuwamy zmienna _Igatunek_8 z modelu\\
+\end{stlog}
+\vspace{1cm}
+{\centering .\\.\\.\\(Po kolejnych ośmiu krokach)\\.\\.\\.\\}
+\vspace{1cm}
+\begin{stlog}
+
+. //Model 11:
+. reg oscar _Igatunek_2 _Igatunek_6 kraj_prod przychody2000 nominacje zlote_globy bafta milosc czas_trwania
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1657
+\HLI{13}{\PLUS}\HLI{30}           F(  9,  1647) =  266.58
+       Model {\VBAR}  113.998822     9  12.6665358           Prob > F      =  0.0000
+    Residual {\VBAR}  78.2582689  1647  .047515646           R-squared     =  0.5929
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5907
+       Total {\VBAR}  192.257091  1656  .116097277           Root MSE      =  .21798
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+   _Igatunek_2 {\VBAR}    .067054   .0258533     2.59   0.010     .0163452    .1177628
+   _Igatunek_6 {\VBAR}   .0454397   .0251905     1.80   0.071    -.0039691    .0948485
+kraj_produkcji {\VBAR}  -.0281764   .0111083    -2.54   0.011    -.0499643   -.0063886
+ przychody2000 {\VBAR}   3.77e-11   2.49e-11     1.52   0.130    -1.11e-11    8.66e-11
+     nominacje {\VBAR}    .081158   .0035788    22.68   0.000     .0741386    .0881774
+   zlote_globy {\VBAR}   .0753699   .0106783     7.06   0.000     .0544254    .0963144
+         bafta {\VBAR}   .0501751   .0086012     5.83   0.000     .0333046    .0670457
+        milosc {\VBAR}   .0509163   .0199139     2.56   0.011     .0118571    .0899755
+  czas_trwania {\VBAR}  -.0008089   .0002865    -2.82   0.005    -.0013709   -.0002469
+         _cons {\VBAR}   .1040226   .0329549     3.16   0.002     .0393847    .1686606
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. //chce usunac zmienna przychody2000
+. //Model ogolny:
+. xi: reg oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1638
+\HLI{13}{\PLUS}\HLI{30}           F( 19,  1618) =  126.33
+       Model {\VBAR}  113.326224    19  5.96453809           Prob > F      =  0.0000
+    Residual {\VBAR}  76.3935565  1618  .047214806           R-squared     =  0.5973
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5926
+       Total {\VBAR}   189.71978  1637  .115894795           Root MSE      =  .21729
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -7.00e-11   1.83e-10    -0.38   0.703    -4.30e-10    2.90e-10
+   _Igatunek_1 {\VBAR}  -.0109619   .0164266    -0.67   0.505    -.0431815    .0212578
+   _Igatunek_2 {\VBAR}   .0653794   .0302081     2.16   0.031     .0061283    .1246306
+   _Igatunek_3 {\VBAR}   .0277427   .0301426     0.92   0.358    -.0313799    .0868654
+   _Igatunek_4 {\VBAR}  -.0364617   .0286802    -1.27   0.204    -.0927159    .0197925
+   _Igatunek_5 {\VBAR}   .0179434   .0240767     0.75   0.456    -.0292814    .0651683
+   _Igatunek_6 {\VBAR}   .0440391   .0271553     1.62   0.105    -.0092242    .0973023
+   _Igatunek_7 {\VBAR}   .0028486   .0241708     0.12   0.906    -.0445608    .0502579
+   _Igatunek_8 {\VBAR}  -.0056704   .0255728    -0.22   0.825    -.0558297    .0444888
+   _Igatunek_9 {\VBAR}  -.0388769   .0355595    -1.09   0.274    -.1086245    .0308706
+   ekranizacja {\VBAR}  -.0099141   .0128952    -0.77   0.442    -.0352071     .015379
+           roi {\VBAR}  -1.84e-08   1.62e-07    -0.11   0.910    -3.37e-07    3.00e-07
+ przychody2000 {\VBAR}   4.56e-11   2.77e-11     1.65   0.100    -8.70e-12    9.99e-11
+kraj_produkcji {\VBAR}  -.0277771   .0113187    -2.45   0.014    -.0499779   -.0055763
+     nominacje {\VBAR}   .0812346    .003667    22.15   0.000     .0740421    .0884271
+   zlote_globy {\VBAR}   .0745881   .0108014     6.91   0.000      .053402    .0957743
+         bafta {\VBAR}   .0487341   .0086398     5.64   0.000     .0317878    .0656804
+        milosc {\VBAR}   .0559628   .0201809     2.77   0.006     .0163793    .0955463
+  czas_trwania {\VBAR}  -.0007682   .0003289    -2.34   0.020    -.0014133   -.0001231
+         _cons {\VBAR}   .1058333   .0387433     2.73   0.006      .029841    .1818256
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. test _Igatunek_7 roi _Igatunek_8 budzet2000 _Igatunek_9 ekranizacja _Igatunek_1  _Igatunek_5 _Igatunek_3
+ _Igatunek_4 przychody2000
+{\smallskip}
+ ( 1)  _Igatunek_7 = 0
+ ( 2)  roi = 0
+ ( 3)  _Igatunek_8 = 0
+ ( 4)  budzet2000 = 0
+ ( 5)  _Igatunek_9 = 0
+ ( 6)  ekranizacja = 0
+ ( 7)  _Igatunek_1 = 0
+ ( 8)  _Igatunek_5 = 0
+ ( 9)  _Igatunek_3 = 0
+ (10)  _Igatunek_4 = 0
+ (11)  przychody2000 = 0
+       Constraint 11 dropped
+{\smallskip}
+       F( 10,  1618) =    0.67
+            Prob > F =    0.7525
+{\smallskip}
+. //usuwamy zmienna przychody2000 z modelu
+. 
+. //Model Finalny:
+. reg oscar _Igatunek_2 _Igatunek_6 kraj_prod nominacje zlote_globy bafta milosc czas_trwania
+{\smallskip}
+      Source {\VBAR}       SS       df       MS              Number of obs =    1663
+\HLI{13}{\PLUS}\HLI{30}           F(  8,  1654) =  300.73
+       Model {\VBAR}  113.994174     8  14.2492717           Prob > F      =  0.0000
+    Residual {\VBAR}  78.3702278  1654  .047382242           R-squared     =  0.5926
+\HLI{13}{\PLUS}\HLI{30}           Adj R-squared =  0.5906
+       Total {\VBAR}  192.364402  1662  .115742721           Root MSE      =  .21767
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      t    P>|t|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+   _Igatunek_2 {\VBAR}   .0755959   .0252044     3.00   0.003       .02616    .1250318
+   _Igatunek_6 {\VBAR}   .0504197   .0249408     2.02   0.043     .0015008    .0993386
+kraj_produkcji {\VBAR}  -.0262216   .0110038    -2.38   0.017    -.0478044   -.0046388
+     nominacje {\VBAR}   .0825513   .0034519    23.91   0.000     .0757806    .0893219
+   zlote_globy {\VBAR}   .0748217   .0106572     7.02   0.000     .0539186    .0957248
+         bafta {\VBAR}   .0490981    .008559     5.74   0.000     .0323105    .0658856
+        milosc {\VBAR}   .0495576   .0198606     2.50   0.013     .0106031    .0885122
+  czas_trwania {\VBAR}  -.0007373   .0002819    -2.62   0.009    -.0012903   -.0001844
+         _cons {\VBAR}   .0990725    .032692     3.03   0.002     .0349504    .1631946
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+
+\end{stlog}
+
+
+
+

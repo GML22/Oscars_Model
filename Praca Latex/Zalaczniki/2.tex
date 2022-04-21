@@ -1,0 +1,389 @@
+\begin{stlog}
+
+. xi: logit oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prodnominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+Iteration 0:   log likelihood = -644.32291  
+Iteration 1:   log likelihood = -281.35559  
+Iteration 2:   log likelihood =  -239.5106  
+Iteration 3:   log likelihood = -236.66683  
+Iteration 4:   log likelihood =  -236.1946  
+Iteration 5:   log likelihood = -235.78428  
+Iteration 6:   log likelihood = -235.78225  
+Iteration 7:   log likelihood = -235.78225  
+{\smallskip}
+Logistic regression                               Number of obs   =       1638
+                                                  LR chi2(19)     =     817.08
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -235.78225                       Pseudo R2       =     0.6341
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -2.59e-09   4.68e-09    -0.55   0.580    -1.18e-08    6.57e-09
+   _Igatunek_1 {\VBAR}  -.2373909   .4828453    -0.49   0.623     -1.18375    .7089686
+   _Igatunek_2 {\VBAR}   .9471718   .6072435     1.56   0.119    -.2430034    2.137347
+   _Igatunek_3 {\VBAR}   .8159699    .639625     1.28   0.202     -.437672    2.069612
+   _Igatunek_4 {\VBAR}  -.5872744   .7910166    -0.74   0.458    -2.137639    .9630898
+   _Igatunek_5 {\VBAR}   .4131266   .6023232     0.69   0.493    -.7674051    1.593658
+   _Igatunek_6 {\VBAR}   .9000649   .5851035     1.54   0.124    -.2467169    2.046847
+   _Igatunek_7 {\VBAR}   .0142123   .6206547     0.02   0.982    -1.202249    1.230673
+   _Igatunek_8 {\VBAR}   .0969241   .8132038     0.12   0.905    -1.496926    1.690774
+   _Igatunek_9 {\VBAR}  -.4927431   1.191666    -0.41   0.679    -2.828366     1.84288
+   ekranizacja {\VBAR}  -.1438909   .2883711    -0.50   0.618    -.7090879    .4213061
+           roi {\VBAR}  -.0001334   .0000993    -1.34   0.179     -.000328    .0000611
+ przychody2000 {\VBAR}   2.11e-09   8.44e-10     2.50   0.012     4.58e-10    3.77e-09
+kraj_produkcji {\VBAR}  -.7313622   .2766945    -2.64   0.008    -1.273674    -.189051
+     nominacje {\VBAR}   .7179235   .0710326    10.11   0.000     .5787021    .8571449
+   zlote_globy {\VBAR}   1.709133   .2826415     6.05   0.000     1.155166      2.2631
+         bafta {\VBAR}   .7203465   .1709316     4.21   0.000     .3853267    1.055366
+        milosc {\VBAR}   1.216106   .3967675     3.07   0.002     .4384561    1.993756
+  czas_trwania {\VBAR}  -.0066497   .0080065    -0.83   0.406    -.0223422    .0090428
+         _cons {\VBAR}  -3.372513    .958756    -3.52   0.000     -5.25164   -1.493386
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+Note: 2 failures and 0 successes completely determined.
+{\smallskip}
+. //wiekszosc skladnikow zmiennej gatunek nieistotna tylko jedna istotna dlatego przetestuje laczna 
+nieistotnosc zmiennej
+. test _Igatunek_7
+{\smallskip}
+ ( 1)  [oscar]_Igatunek_7 = 0
+{\smallskip}
+           chi2(  1) =    0.00
+         Prob > chi2 =    0.9817
+{\smallskip}
+. //  usuwamy zmienna _Igatunek_7 z modelu
+. 
+. //Model 2:
+. logit oscar  budzet2000 _Igatunek_1 _Igatunek_2 _Igatunek_3 _Igatunek_4 _Igatunek_5 _Igatunek_6 _Igatunek_8
+ _Igatunek_9 ekranizacja kraj_prod roi przychody2000 nominacje zlote_globy bafta milosc czas_trwania
+{\smallskip}
+Iteration 0:   log likelihood = -644.32291  
+Iteration 1:   log likelihood = -281.36748  
+Iteration 2:   log likelihood = -239.51171  
+Iteration 3:   log likelihood = -236.66723  
+Iteration 4:   log likelihood = -236.19364  
+Iteration 5:   log likelihood = -235.78448  
+Iteration 6:   log likelihood = -235.78252  
+Iteration 7:   log likelihood = -235.78252  
+{\smallskip}
+Logistic regression                               Number of obs   =       1638
+                                                  LR chi2(18)     =     817.08
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -235.78252                       Pseudo R2       =     0.6341
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -2.59e-09   4.67e-09    -0.55   0.580    -1.17e-08    6.57e-09
+   _Igatunek_1 {\VBAR}  -.2392733   .4757416    -0.50   0.615     -1.17171    .6931631
+   _Igatunek_2 {\VBAR}   .9447424   .5978526     1.58   0.114    -.2270271    2.116512
+   _Igatunek_3 {\VBAR}   .8139247   .6333151     1.29   0.199    -.4273501    2.055199
+   _Igatunek_4 {\VBAR}  -.5896349   .7842555    -0.75   0.452    -2.126747    .9474776
+   _Igatunek_5 {\VBAR}   .4108634   .5941073     0.69   0.489    -.7535655    1.575292
+   _Igatunek_6 {\VBAR}   .8978246   .5768119     1.56   0.120     -.232706    2.028355
+   _Igatunek_8 {\VBAR}   .0948438   .8080931     0.12   0.907     -1.48899    1.678677
+   _Igatunek_9 {\VBAR}  -.4943301   1.189544    -0.42   0.678    -2.825794    1.837134
+   ekranizacja {\VBAR}  -.1438194   .2883442    -0.50   0.618    -.7089637    .4213249
+kraj_produkcji {\VBAR}  -.7314806   .2766437    -2.64   0.008    -1.273692   -.1892689
+           roi {\VBAR}  -.0001335   .0000993    -1.34   0.179     -.000328    .0000611
+ przychody2000 {\VBAR}   2.11e-09   8.42e-10     2.51   0.012     4.63e-10    3.76e-09
+     nominacje {\VBAR}    .717809   .0708554    10.13   0.000     .5789351    .8566829
+   zlote_globy {\VBAR}   1.709009    .282551     6.05   0.000     1.155219    2.262799
+         bafta {\VBAR}   .7201784   .1707798     4.22   0.000     .3854562    1.054901
+        milosc {\VBAR}   1.215121   .3944035     3.08   0.002     .4421044    1.988138
+  czas_trwania {\VBAR}  -.0066614   .0079898    -0.83   0.404    -.0223212    .0089984
+         _cons {\VBAR}  -3.369329   .9485363    -3.55   0.000    -5.228426   -1.510232
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+Note: 2 failures and 0 successes completely determined.
+{\smallskip}
+. //chce usunac zmienna _Igatunek_8
+. //Model ogolny:
+. xi: logit oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+Iteration 0:   log likelihood = -644.32291  
+Iteration 1:   log likelihood = -281.35559  
+Iteration 2:   log likelihood =  -239.5106  
+Iteration 3:   log likelihood = -236.66683  
+Iteration 4:   log likelihood =  -236.1946  
+Iteration 5:   log likelihood = -235.78428  
+Iteration 6:   log likelihood = -235.78225  
+Iteration 7:   log likelihood = -235.78225  
+{\smallskip}
+Logistic regression                               Number of obs   =       1638
+                                                  LR chi2(19)     =     817.08
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -235.78225                       Pseudo R2       =     0.6341
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -2.59e-09   4.68e-09    -0.55   0.580    -1.18e-08    6.57e-09
+   _Igatunek_1 {\VBAR}  -.2373909   .4828453    -0.49   0.623     -1.18375    .7089686
+   _Igatunek_2 {\VBAR}   .9471718   .6072435     1.56   0.119    -.2430034    2.137347
+   _Igatunek_3 {\VBAR}   .8159699    .639625     1.28   0.202     -.437672    2.069612
+   _Igatunek_4 {\VBAR}  -.5872744   .7910166    -0.74   0.458    -2.137639    .9630898
+   _Igatunek_5 {\VBAR}   .4131266   .6023232     0.69   0.493    -.7674051    1.593658
+   _Igatunek_6 {\VBAR}   .9000649   .5851035     1.54   0.124    -.2467169    2.046847
+   _Igatunek_7 {\VBAR}   .0142123   .6206547     0.02   0.982    -1.202249    1.230673
+   _Igatunek_8 {\VBAR}   .0969241   .8132038     0.12   0.905    -1.496926    1.690774
+   _Igatunek_9 {\VBAR}  -.4927431   1.191666    -0.41   0.679    -2.828366     1.84288
+   ekranizacja {\VBAR}  -.1438909   .2883711    -0.50   0.618    -.7090879    .4213061
+           roi {\VBAR}  -.0001334   .0000993    -1.34   0.179     -.000328    .0000611
+ przychody2000 {\VBAR}   2.11e-09   8.44e-10     2.50   0.012     4.58e-10    3.77e-09
+kraj_produkcji {\VBAR}  -.7313622   .2766945    -2.64   0.008    -1.273674    -.189051
+     nominacje {\VBAR}   .7179235   .0710326    10.11   0.000     .5787021    .8571449
+   zlote_globy {\VBAR}   1.709133   .2826415     6.05   0.000     1.155166      2.2631
+         bafta {\VBAR}   .7203465   .1709316     4.21   0.000     .3853267    1.055366
+        milosc {\VBAR}   1.216106   .3967675     3.07   0.002     .4384561    1.993756
+  czas_trwania {\VBAR}  -.0066497   .0080065    -0.83   0.406    -.0223422    .0090428
+         _cons {\VBAR}  -3.372513    .958756    -3.52   0.000     -5.25164   -1.493386
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+Note: 2 failures and 0 successes completely determined.
+{\smallskip}
+. test _Igatunek_7 _Igatunek_8 
+{\smallskip}
+ ( 1)  [oscar]_Igatunek_7 = 0
+ ( 2)  [oscar]_Igatunek_8 = 0
+{\smallskip}
+           chi2(  2) =    0.01
+         Prob > chi2 =    0.9929
+{\smallskip}
+. // usuwamy zmienna _Igatunek_8 z modelu
+. 
+. //Model 3:
+. logit oscar  budzet2000 _Igatunek_1 _Igatunek_2 _Igatunek_3 _Igatunek_4 _Igatunek_5 _Igatunek_6 _Igatunek_9
+ ekranizacja kraj_prod roi przychody2000 nominacje zlote_globy bafta milosc czas_trwania
+{\smallskip}
+Iteration 0:   log likelihood = -644.32291  
+Iteration 1:   log likelihood = -281.32881  
+Iteration 2:   log likelihood = -239.52629  
+Iteration 3:   log likelihood = -236.68607  
+Iteration 4:   log likelihood = -236.19813  
+Iteration 5:   log likelihood = -235.79136  
+Iteration 6:   log likelihood = -235.78927  
+Iteration 7:   log likelihood = -235.78927  
+{\smallskip}
+Logistic regression                               Number of obs   =       1638
+                                                  LR chi2(17)     =     817.07
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -235.78927                       Pseudo R2       =     0.6341
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -2.59e-09   4.67e-09    -0.56   0.579    -1.17e-08    6.56e-09
+   _Igatunek_1 {\VBAR}  -.2499541   .4664813    -0.54   0.592    -1.164241    .6643323
+   _Igatunek_2 {\VBAR}   .9312145   .5862236     1.59   0.112    -.2177626    2.080192
+   _Igatunek_3 {\VBAR}   .8035226   .6266248     1.28   0.200    -.4246395    2.031685
+   _Igatunek_4 {\VBAR}  -.5997721   .7793047    -0.77   0.442    -2.127181    .9276371
+   _Igatunek_5 {\VBAR}   .3996085   .5858964     0.68   0.495    -.7487274    1.547944
+   _Igatunek_6 {\VBAR}   .8865796   .5683673     1.56   0.119    -.2273999    2.000559
+   _Igatunek_9 {\VBAR}  -.5007684   1.187094    -0.42   0.673    -2.827429    1.825892
+   ekranizacja {\VBAR}  -.1452389   .2880655    -0.50   0.614    -.7098369     .419359
+kraj_produkcji {\VBAR}  -.7303455    .276447    -2.64   0.008    -1.272172   -.1885193
+           roi {\VBAR}  -.0001343    .000099    -1.36   0.175    -.0003285    .0000598
+ przychody2000 {\VBAR}   2.13e-09   8.36e-10     2.54   0.011     4.86e-10    3.76e-09
+     nominacje {\VBAR}   .7165897   .0700188    10.23   0.000     .5793553     .853824
+   zlote_globy {\VBAR}   1.706752   .2818117     6.06   0.000     1.154411    2.259093
+         bafta {\VBAR}   .7196101   .1706344     4.22   0.000     .3851729    1.054047
+        milosc {\VBAR}    1.21068   .3922842     3.09   0.002     .4418166    1.979542
+  czas_trwania {\VBAR}  -.0067671   .0079391    -0.85   0.394    -.0223274    .0087932
+         _cons {\VBAR}  -3.346866   .9287477    -3.60   0.000    -5.167178   -1.526554
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+Note: 2 failures and 0 successes completely determined.
+{\smallskip}
+. //chce usunac zmienna _Igatunek_9
+. //Model ogolny:
+. xi: logit oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy
+ bafta milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+Iteration 0:   log likelihood = -644.32291  
+Iteration 1:   log likelihood = -281.35559  
+Iteration 2:   log likelihood =  -239.5106  
+Iteration 3:   log likelihood = -236.66683  
+Iteration 4:   log likelihood =  -236.1946  
+Iteration 5:   log likelihood = -235.78428  
+Iteration 6:   log likelihood = -235.78225  
+Iteration 7:   log likelihood = -235.78225  
+{\smallskip}
+Logistic regression                               Number of obs   =       1638
+                                                  LR chi2(19)     =     817.08
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -235.78225                       Pseudo R2       =     0.6341
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -2.59e-09   4.68e-09    -0.55   0.580    -1.18e-08    6.57e-09
+   _Igatunek_1 {\VBAR}  -.2373909   .4828453    -0.49   0.623     -1.18375    .7089686
+   _Igatunek_2 {\VBAR}   .9471718   .6072435     1.56   0.119    -.2430034    2.137347
+   _Igatunek_3 {\VBAR}   .8159699    .639625     1.28   0.202     -.437672    2.069612
+   _Igatunek_4 {\VBAR}  -.5872744   .7910166    -0.74   0.458    -2.137639    .9630898
+   _Igatunek_5 {\VBAR}   .4131266   .6023232     0.69   0.493    -.7674051    1.593658
+   _Igatunek_6 {\VBAR}   .9000649   .5851035     1.54   0.124    -.2467169    2.046847
+   _Igatunek_7 {\VBAR}   .0142123   .6206547     0.02   0.982    -1.202249    1.230673
+   _Igatunek_8 {\VBAR}   .0969241   .8132038     0.12   0.905    -1.496926    1.690774
+   _Igatunek_9 {\VBAR}  -.4927431   1.191666    -0.41   0.679    -2.828366     1.84288
+   ekranizacja {\VBAR}  -.1438909   .2883711    -0.50   0.618    -.7090879    .4213061
+           roi {\VBAR}  -.0001334   .0000993    -1.34   0.179     -.000328    .0000611
+ przychody2000 {\VBAR}   2.11e-09   8.44e-10     2.50   0.012     4.58e-10    3.77e-09
+kraj_produkcji {\VBAR}  -.7313622   .2766945    -2.64   0.008    -1.273674    -.189051
+     nominacje {\VBAR}   .7179235   .0710326    10.11   0.000     .5787021    .8571449
+   zlote_globy {\VBAR}   1.709133   .2826415     6.05   0.000     1.155166      2.2631
+         bafta {\VBAR}   .7203465   .1709316     4.21   0.000     .3853267    1.055366
+        milosc {\VBAR}   1.216106   .3967675     3.07   0.002     .4384561    1.993756
+  czas_trwania {\VBAR}  -.0066497   .0080065    -0.83   0.406    -.0223422    .0090428
+         _cons {\VBAR}  -3.372513    .958756    -3.52   0.000     -5.25164   -1.493386
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+Note: 2 failures and 0 successes completely determined.
+{\smallskip}
+. test _Igatunek_7 _Igatunek_8 _Igatunek_9
+{\smallskip}
+ ( 1)  [oscar]_Igatunek_7 = 0
+ ( 2)  [oscar]_Igatunek_8 = 0
+ ( 3)  [oscar]_Igatunek_9 = 0
+{\smallskip}
+           chi2(  3) =    0.19
+         Prob > chi2 =    0.9789
+{\smallskip}
+. //usuwamy zmienna _Igatunek_9 z modelu
+
+\end{stlog}
+\vspace{1cm}
+{\centering .\\.\\.\\(Po kolejnych dziewięciu krokach)\\.\\.\\.\\}
+\vspace{1cm}
+\begin{stlog}
+
+. //Model 12:
+. logit oscar _Igatunek_2 _Igatunek_6 kraj_prod przychody2000 nominacje zlote_globy bafta milosc
+{\smallskip}
+Iteration 0:   log likelihood = -652.65521  
+Iteration 1:   log likelihood = -288.24358  
+Iteration 2:   log likelihood = -246.71422  
+Iteration 3:   log likelihood = -244.09593  
+Iteration 4:   log likelihood = -244.09114  
+Iteration 5:   log likelihood = -244.09114  
+{\smallskip}
+Logistic regression                               Number of obs   =       1657
+                                                  LR chi2(8)      =     817.13
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -244.09114                       Pseudo R2       =     0.6260
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+   _Igatunek_2 {\VBAR}   1.174359   .4232182     2.77   0.006     .3448662    2.003851
+   _Igatunek_6 {\VBAR}   .8962285   .5138457     1.74   0.081    -.1108906    1.903348
+kraj_produkcji {\VBAR}  -.7140952   .2661859    -2.68   0.007     -1.23581   -.1923805
+ przychody2000 {\VBAR}   1.20e-09   4.86e-10     2.46   0.014     2.45e-10    2.15e-09
+     nominacje {\VBAR}   .6898152   .0612633    11.26   0.000     .5697412    .8098891
+   zlote_globy {\VBAR}    1.66127   .2675523     6.21   0.000     1.136877    2.185663
+         bafta {\VBAR}    .766288   .1690892     4.53   0.000     .4348793    1.097697
+        milosc {\VBAR}   1.097883   .3794953     2.89   0.004     .3540859     1.84168
+         _cons {\VBAR}  -4.157511   .2469404   -16.84   0.000    -4.641506   -3.673517
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+. //chce usunac zmienna _Igatunek_6
+. //Model ogolny:
+. xi: logit oscar  budzet2000 i.gatunek ekranizacja roi przychody2000 kraj_prod nominacje zlote_globy bafta
+ milosc czas_trwania
+i.gatunek         _Igatunek_0-9       (naturally coded; _Igatunek_0 omitted)
+{\smallskip}
+Iteration 0:   log likelihood = -644.32291  
+Iteration 1:   log likelihood = -281.35559  
+Iteration 2:   log likelihood =  -239.5106  
+Iteration 3:   log likelihood = -236.66683  
+Iteration 4:   log likelihood =  -236.1946  
+Iteration 5:   log likelihood = -235.78428  
+Iteration 6:   log likelihood = -235.78225  
+Iteration 7:   log likelihood = -235.78225  
+{\smallskip}
+Logistic regression                               Number of obs   =       1638
+                                                  LR chi2(19)     =     817.08
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -235.78225                       Pseudo R2       =     0.6341
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+    budzet2000 {\VBAR}  -2.59e-09   4.68e-09    -0.55   0.580    -1.18e-08    6.57e-09
+   _Igatunek_1 {\VBAR}  -.2373909   .4828453    -0.49   0.623     -1.18375    .7089686
+   _Igatunek_2 {\VBAR}   .9471718   .6072435     1.56   0.119    -.2430034    2.137347
+   _Igatunek_3 {\VBAR}   .8159699    .639625     1.28   0.202     -.437672    2.069612
+   _Igatunek_4 {\VBAR}  -.5872744   .7910166    -0.74   0.458    -2.137639    .9630898
+   _Igatunek_5 {\VBAR}   .4131266   .6023232     0.69   0.493    -.7674051    1.593658
+   _Igatunek_6 {\VBAR}   .9000649   .5851035     1.54   0.124    -.2467169    2.046847
+   _Igatunek_7 {\VBAR}   .0142123   .6206547     0.02   0.982    -1.202249    1.230673
+   _Igatunek_8 {\VBAR}   .0969241   .8132038     0.12   0.905    -1.496926    1.690774
+   _Igatunek_9 {\VBAR}  -.4927431   1.191666    -0.41   0.679    -2.828366     1.84288
+   ekranizacja {\VBAR}  -.1438909   .2883711    -0.50   0.618    -.7090879    .4213061
+           roi {\VBAR}  -.0001334   .0000993    -1.34   0.179     -.000328    .0000611
+ przychody2000 {\VBAR}   2.11e-09   8.44e-10     2.50   0.012     4.58e-10    3.77e-09
+kraj_produkcji {\VBAR}  -.7313622   .2766945    -2.64   0.008    -1.273674    -.189051
+     nominacje {\VBAR}   .7179235   .0710326    10.11   0.000     .5787021    .8571449
+   zlote_globy {\VBAR}   1.709133   .2826415     6.05   0.000     1.155166      2.2631
+         bafta {\VBAR}   .7203465   .1709316     4.21   0.000     .3853267    1.055366
+        milosc {\VBAR}   1.216106   .3967675     3.07   0.002     .4384561    1.993756
+  czas_trwania {\VBAR}  -.0066497   .0080065    -0.83   0.406    -.0223422    .0090428
+         _cons {\VBAR}  -3.372513    .958756    -3.52   0.000     -5.25164   -1.493386
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+Note: 2 failures and 0 successes completely determined.
+{\smallskip}
+. test _Igatunek_7 _Igatunek_8 _Igatunek_9 _Igatunek_1 ekranizacja budzet2000 _Igatunek_5 czas_trwania roi 
+_Igatunek_5 _Igatunek_3 _Igatunek_6
+{\smallskip}
+ ( 1)  [oscar]_Igatunek_7 = 0
+ ( 2)  [oscar]_Igatunek_8 = 0
+ ( 3)  [oscar]_Igatunek_9 = 0
+ ( 4)  [oscar]_Igatunek_1 = 0
+ ( 5)  [oscar]ekranizacja = 0
+ ( 6)  [oscar]budzet2000 = 0
+ ( 7)  [oscar]_Igatunek_5 = 0
+ ( 8)  [oscar]czas_trwania = 0
+ ( 9)  [oscar]roi = 0
+ (10)  [oscar]_Igatunek_5 = 0
+ (11)  [oscar]_Igatunek_3 = 0
+ (12)  [oscar]_Igatunek_6 = 0
+       Constraint 10 dropped
+{\smallskip}
+           chi2( 11) =    8.74
+         Prob > chi2 =    0.6455
+{\smallskip}
+. //usuwamy zmienna _Igatunek_6 z modelu
+. 
+. //Model Finalny:
+. logit oscar _Igatunek_2 kraj_prod przychody2000 nominacje zlote_globy bafta milosc
+{\smallskip}
+Iteration 0:   log likelihood = -652.65521  
+Iteration 1:   log likelihood =  -288.8549  
+Iteration 2:   log likelihood = -247.94559  
+Iteration 3:   log likelihood = -245.42423  
+Iteration 4:   log likelihood = -245.41989  
+Iteration 5:   log likelihood = -245.41989  
+{\smallskip}
+Logistic regression                               Number of obs   =       1657
+                                                  LR chi2(7)      =     814.47
+                                                  Prob > chi2     =     0.0000
+Log likelihood = -245.41989                       Pseudo R2       =     0.6240
+{\smallskip}
+\HLI{15}{\TOPT}\HLI{63}{\DASH}
+         oscar {\VBAR}      Coef.   Std. Err.      z    P>|z|     [95\% Conf. Interval]
+\HLI{15}{\PLUS}\HLI{63}{\DASH}
+   _Igatunek_2 {\VBAR}    1.09894   .4186544     2.62   0.009     .2783924    1.919488
+kraj_produkcji {\VBAR}  -.7350574   .2651866    -2.77   0.006    -1.254814   -.2153012
+ przychody2000 {\VBAR}   1.31e-09   4.83e-10     2.71   0.007     3.61e-10    2.26e-09
+     nominacje {\VBAR}    .677297   .0601785    11.25   0.000     .5593492    .7952448
+   zlote_globy {\VBAR}   1.642281   .2649008     6.20   0.000     1.123085    2.161477
+         bafta {\VBAR}   .7662303    .168816     4.54   0.000      .435357    1.097104
+        milosc {\VBAR}   1.040389   .3741386     2.78   0.005      .307091    1.773687
+         _cons {\VBAR}   -4.07565   .2378775   -17.13   0.000    -4.541881   -3.609418
+\HLI{15}{\BOTT}\HLI{63}{\DASH}
+{\smallskip}
+
+
+\end{stlog}

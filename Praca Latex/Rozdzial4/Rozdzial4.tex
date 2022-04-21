@@ -1,0 +1,230 @@
+\newpage
+\chapter*{Rozdział 4 \\ \vspace{1cm} Interpretacja wyników}
+ \addcontentsline{toc}{chapter}{4. Interpretacja wyników}
+ 
+ W rozdziale tym przedstawiona zostanie interpretacja wyników regresji dla modeli Logit i Probit z trzema zmiennymi zlogarytmowanymi, gdyż tylko te modele posiadają prawidłową formę funkcyjną. Interpretacja oszacowań modelu LMP ze względu na heteroskedastyczność reszt mogłaby prowadzić do nieprawidłowych wniosków wynikających z możliwych błędnych wskazań modelu co do istotności niektórych zmiennych. Interpretacji w modelach logitowym i probitowym podlegać będą znaki przy oszacowanych parametrach oraz efekty cząstkowe. Dodatkowo dla modelu Logit wyznaczone zostaną ilorazy szans. 
+ 
+\phantomsection				% do hiperlinków dla sekcji w spisie treści
+\section*{4.1. Interpretacja znaków przy parametrach modeli}
+\addcontentsline{toc}{section}{4.1. Interpretacja znaków przy parametrach modeli}
+ 
+Interpretację wyników należy rozpocząć od analizy znaków przy parametrach zmiennych niezależnych w modelach Logit i Probit. Samych współczynników w żadnym z tych modeli nie należy interpretować wprost - w przypadku modelu probit nie mają one żadnej bezpośredniej interpretacji, a w przypadku modelu logit oznaczają procentowy wpływ jednostkowej zmiany wartości zmiennej objaśniającej na iloraz szans.
+ 
+\vspace{0.3cm}
+\textbf{Tabela 50. Parametry zmiennych niezależnych w modelach Logit i Probit}
+\begin{stlog}
+. est table log_final prob_final 
+\HLI{13}{\TOPT}\HLI{26}
+    Variable {\VBAR} log_final    prob_final  
+\HLI{13}{\PLUS}\HLI{26}
+ _Igatunek_2 {\VBAR}  1.2988123    .65770695  
+kraj_produ{\tytilde}i {\VBAR} -.67950148   -.36840234  
+przycho{\tytilde}2000 {\VBAR}  9.583e-10    4.704e-10  
+      ln_nom {\VBAR}  2.4378704    1.3302167  
+       ln_zg {\VBAR}  1.9138695    1.0424347  
+      ln_baf {\VBAR}  1.6201441    .89365612  
+      milosc {\VBAR}  1.0767324    .52131938  
+       _cons {\VBAR} -3.7079477   -1.9951296  
+\HLI{13}{\BOTT}\HLI{26}
+\end{stlog}
+\textit{\footnotesize{Źródło: Opracowanie własne.}} \\
+
+Interpretacja znaków przy parametrach jest częściowo zgodna z kierunkami zawartymi w hipotezach badawczych niniejszej pracy:
+ \begin{itemize}
+	\item Film animowany ma większe prawdopodobieństwo zdobycia Oscara niż dramat (nie zakładano tego zjawiska w hipotezach),
+	\item Film wyprodukowany wyłącznie przez Stany Zjednoczone ma mniejsze prawdopodobieństwo zdobycia statuetki niż film wyprodukowany przez inne kraje lub przez Stany Zjednoczone we współpracy z innymi krajami (hipoteza badawcza zakładała, iż filmy amerykańskie powinny mieć większe prawdopodobieństwo zdobycia nagrody),
+	\item Wraz ze wzrostem przychodów z kas biletowych prawdopodobieństwo zdobycia nagrody Akademii rośnie (zgodne z hipotezą),
+	\item Im więcej nominacji otrzymał dany film tym większe prawdopodobieństwo, że zdobędzie Oscara (zgodne z hipotezą) \footnote{Fakt zlogarytmowania zmiennej nie wpływa na znak przy jej oszacowanym parametrze.},
+	\item Im więcej Złotych Globów zdobył film tym większe prawdopodobieństwo, że zdobędzie Oscara (zgodne z hipotezą)\footnote{Patrz odnośnik 5.},
+	\item Im więcej nagród BAFTA otrzymał film tym większe jest prawdopodobieństwo, że otrzyma on również Oscara (zgodne z hipotezą) \footnote{Patrz odnośnik 5.},
+	\item Film z wyraźnie zarysowanym wątkiem miłosnym ma większe prawdopodobieństwo zdobycia statuetki niż film pozbawiony tego wątku (hipoteza zakładała, iż wątek miłosny nie powinien wpływać na prawdopodobieństwo zdobycia Oscara).
+ \end{itemize}
+ 
+ \phantomsection				% do hiperlinków dla sekcji w spisie treści
+\section*{4.2. Efekty cząstkowe w modelach Logit i Probit}
+\addcontentsline{toc}{section}{4.2. Efekty cząstkowe w modelach Logit i Probit}
+ \phantomsection				% do hiperlinków dla sekcji w spisie treści
+
+Efekty cząstkowe mierzą jednostkową reakcję zmiennej zależnej na jednostkową zmianę zmiennej niezależnej, oblicza się je według następującego wzoru:
+
+\begin{equation}
+\frac{\partial E(y|x)}{\partial x_i}=f(x\beta)\beta_i=\Phi(x\beta)\beta_i
+\end{equation}
+
+Efekty cząstkowe są niezwykle użyteczne, gdyż można je bezpośrednio porównywać pomiędzy modelami.
+
+\subsection*{4.2.1. Model Logit}
+\addcontentsline{toc}{subsection}{4.2.1. Model Logit}
+
+\vspace{0.3cm}
+\textbf{Tabela 51. Efekty cząstkowe w modelu Logit}
+\begin{stlog}
+. mfx compute
+Marginal effects after logit
+      y  = Pr(oscar) (predict)
+         =  .05364139
+\HLI{9}{\TOPT}\HLI{68}
+variable {\VBAR}      dy/dx    Std. Err.     z    P>|z|  [    95\% C.I.   ]      X
+\HLI{9}{\PLUS}\HLI{68}
+_Igatu{\tytilde}2*{\VBAR}   .1123638      .05289    2.12   0.034   .008703  .216025   .051298
+kraj_p{\tytilde}i*{\VBAR}  -.0362143      .01344   -2.70   0.007  -.062551 -.009878   .558841
+prz{\tytilde}2000 {\VBAR}   4.86e-11      .00000    2.03   0.042   1.7e-12  9.6e-11   1.6e+08
+  ln_nom {\VBAR}    .123756      .01334    9.28   0.000   .097607  .149905    .29546
+   ln_zg {\VBAR}   .0971556      .03981    2.44   0.015   .019137  .175175   .045141
+  ln_baf {\VBAR}    .082245      .02409    3.41   0.001   .035021  .129469   .063922
+  milosc*{\VBAR}   .0830142      .03823    2.17   0.030   .008088  .157941   .079662
+\HLI{9}{\BOTT}\HLI{68}
+(*) dy/dx is for discrete change of dummy variable from 0 to 1
+\end{stlog}
+\textit{\footnotesize{Źródło: Opracowanie własne.}} \\
+\vspace{0.5cm}
+
+Gdy zmienne objaśniające przyjmują wartości na poziomie swoich średnich prawdopodobieństwo zdobycia Oscara wynosi około 5,36\% ($y = Pr(oscar)(predict) = .05364139$).
+
+Efekty cząstkowe ($dy/dx$) w tym modelu powinny być interpretowane w następujący sposób:
+
+\begin{itemize}
+\item Film animowany ma wyższe prawdopodobieństwo dostania Oscara o około 11,24 punktu procentowego od filmu, którego gatunkiem jest dramat, przy charakterystykach na poziomie średnich w próbie,
+\item Film wyprodukowany wyłącznie przez Stany Zjednoczone ma prawdopodobieństwo zdobycia Oscara nisze o około 3,62 punkty procentowe niż film wyprodukowany przez inne kraje lub przez Stany Zjednoczone we współpracy z innymi krajami, przy charakterystykach na poziomie średnich w próbie,
+\item Wzrost przychodów  z kas kinowy filmu o jeden milion dolarów powoduje wzrost prawdopodobieństwa zdobycia Oscara o 0,00486 punktu procentowego, przy charakterystykach na poziomie średnich w próbie,
+\item Filmy z wyraźnym wątkiem miłosnym mają wyższe prawdopodobieństwo dostania statuetki o około 8,3 punktu procentowego niż filmy bez tego wątku, przy charakterystykach na poziomie średnich w próbie,
+\end{itemize}
+
+W przypadku zlogarytmowanych zmiennych niezależnych efekty cząstkowe interpretowane są nieco inaczej. Na przykład dla zmiennej nominacje prawidłowo policzony efekt cząstkowy powinien wyglądać następująco:
+
+\begin{equation}
+\frac{\partial F(\beta_{ln\_nom}ln\_nom)}{\partial nominacje}=f(x\beta)\frac{\beta_{ln\_nom}}{nominacje}
+\end{equation} 
+\vspace{0.5cm}
+Aby móc zinterpretować efekty cząstkowe należy posłużyć się średnimi wartościami zmiennych nominacje, złote_globy i bafta, które przedstawia tabela 52.
+
+\vspace{0.5cm}
+\textbf{Tabela 52. Charakterystyki zmiennych nominacje, zlote_globy i bafta}
+\begin{stlog}
+. sum nominacje zlote_globy bafta
+{\smallskip}
+    Variable {\VBAR}       Obs        Mean    Std. Dev.       Min        Max
+\HLI{13}{\PLUS}\HLI{56}
+   nominacje {\VBAR}      1663    1.157547    2.441459          0         15
+ zlote_globy {\VBAR}      1663    .1906194    .6791433          0          6
+       bafta {\VBAR}      1663    .2489477     .836493          0          7
+\end{stlog}
+\textit{\footnotesize{Źródło: Opracowanie własne.}} \\
+
+Faktyczne efekty cząstkowe dla zmiennych nominacje, zlote_globy i bafta wynoszą:
+
+\begin{equation}
+\frac{\partial F(\beta_{ln\_nom}ln\_nom)}{\partial nominacje}=f(x\beta)\frac{\beta_{ln\_nom}}{\overline{nominacje}}= \frac{0,123756}{1,157547}\approx 0,1071
+\end{equation}
+\begin{equation}
+\frac{\partial F(\beta_{ln\_zg}ln\_zg)}{\partial zlote\_globy}=f(x\beta)\frac{\beta_{ln\_zg}}{\overline{zlote\_globy}}= \frac{0,0971556}{0,1906194}\approx 0,5097
+\end{equation}
+\begin{equation}
+\frac{\partial F(\beta_{ln\_baf}ln\_baf)}{\partial bafta}f(x\beta)\frac{\beta_{ln\_baf}}{\overline{bafta}}= \frac{0,082245}{0,2489477}\approx 0,3304 
+\end{equation}
+\vspace{1cm}
+
+Interpretacja dla prawidłowych efektów cząstkowych będzie następująca: 
+
+\begin{itemize}
+\item Wzrost liczby nominacji o jednostkę powoduje wzrost prawdopodobieństwa zdobycia Oscara o około 10,71 punktu procentowego, przy charakterystykach na poziomie średnich w próbie, 
+\item Wzrost liczby Złotych Globów o jednostkę powoduje wzrost prawdopodobieństwa zdobycia Oscara o około 50,97 punktu procentowego, przy charakterystykach na poziomie średnich w próbie,
+\item Wzrost liczby nagród BAFTA o jednostkę powoduje wzrost prawdopodobieństwa zdobycia Oscara o około 33,04 punktu procentowego, przy charakterystykach na poziomie średnich w próbie,
+\end{itemize}
+
+\phantomsection				% do hiperlinków dla sekcji w spisie treści
+\subsection*{4.2.1. Model Probit}
+\addcontentsline{toc}{subsection}{4.2.1. Model Probit}
+
+\vspace{0.5cm}
+\textbf{Tabela 53. Efekty cząstkowe w modelu Probit}
+\begin{stlog}
+. mfx compute
+{\smallskip}
+Marginal effects after probit
+      y  = Pr(oscar) (predict)
+         =  .06026116
+\HLI{9}{\TOPT}\HLI{68}
+variable {\VBAR}      dy/dx    Std. Err.     z    P>|z|  [    95\% C.I.   ]      X
+\HLI{9}{\PLUS}\HLI{68}
+_Igatu{\tytilde}2*{\VBAR}   .1202109       .0528    2.28   0.023   .016717  .223705   .051298
+kraj_p{\tytilde}i*{\VBAR}  -.0458747      .01531   -3.00   0.003  -.075875 -.015874   .558841
+prz{\tytilde}2000 {\VBAR}   5.62e-11      .00000    2.07   0.039   2.9e-12  1.1e-10   1.6e+08
+  ln_nom {\VBAR}   .1589991      .01512   10.52   0.000   .129364  .188634    .29546
+   ln_zg {\VBAR}   .1246009      .04652    2.68   0.007   .033425  .215776   .045141
+  ln_baf {\VBAR}   .1068176       .0288    3.71   0.000    .05038  .163256   .063922
+  milosc*{\VBAR}   .0862263      .03858    2.24   0.025   .010611  .161842   .079662
+\HLI{9}{\BOTT}\HLI{68}
+(*) dy/dx is for discrete change of dummy variable from 0 to 1
+\end{stlog}
+\textit{\footnotesize{Źródło: Opracowanie własne.}} \\
+
+Gdy zmienne objaśniające przyjmują wartości na poziomie swoich średnich prawdopodobieństwo zdobycia Oscara wynosi około 6,03\% ($y = Pr(oscar)(predict) = .06026116$).
+
+Efekty cząstkowe ($dy/dx$) w tym modelu powinny być interpretowane w następujący sposób:
+
+\begin{itemize}
+\item Film animowany ma wyższe prawdopodobieństwo dostania Oscara o około 12,02 punktu procentowego od filmu, którego gatunkiem jest dramat, przy charakterystykach na poziomie średnich w próbie,
+\item Film wyprodukowany wyłącznie przez Stany Zjednoczone ma prawdopodobieństwo zdobycia Oscara nisze o około 4,59 punkty procentowe niż film wyprodukowany przez inne kraje lub przez Stany Zjednoczone we współpracy z innymi krajami, przy charakterystykach na poziomie średnich w próbie,
+\item Wzrost przychodów z kas kinowy filmu o jeden milion dolarów powoduje wzrost prawdopodobieństwa zdobycia Oscara o 0,00562 punktu procentowego, przy charakterystykach na poziomie średnich w próbie,
+\item Filmy z wyraźnym wątkiem miłosnym mają wyższe prawdopodobieństwo dostania statuetki o około 8,62 punktu procentowego niż filmy bez tego wątku, przy charakterystykach na poziomie średnich w próbie,
+\end{itemize}
+
+Podobnie jak w przypadku efektów cząstkowych dla modelu logitowego, aby móc interpretować efekty cząstkowe zmiennych nominacje, zlote_globy i bafta należy podzielić oszacowane efekty (dla zmiennych zlogarytmowanych) przez średnią wartość tych zmiennych. Faktyczne efekty cząstkowe dla zmiennych nominacje, zlote_globy i bafta wynoszą:
+
+\begin{equation}
+\frac{\partial F(\beta_{ln\_nom}ln\_nom)}{\partial nominacje}=f(x\beta)\frac{\beta_{ln\_nom}}{\overline{nominacje}}= \frac{0,1589991}{1,157547}\approx 0,1373
+\end{equation}
+\begin{equation}
+\frac{\partial F(\beta_{ln\_zg}ln\_zg)}{\partial zlote\_globy}=f(x\beta)\frac{\beta_{ln\_zg}}{\overline{zlote\_globy}}= \frac{0,1246009}{0,1906194}\approx 0,6567
+\end{equation}
+\begin{equation}
+\frac{\partial F(\beta_{ln\_baf}ln\_baf)}{\partial bafta}=f(x\beta)\frac{\beta_{ln\_baf}}{\overline{bafta}}= \frac{0,1068176}{0,2489477}\approx 0,4291 
+\end{equation}
+\vspace{0.3cm}
+
+Interpretacja dla prawidłowych efektów cząstkowych będzie następująca:
+
+\begin{itemize}
+\item Wzrost liczby nominacji o jednostkę powoduje wzrost prawdopodobieństwa zdobycia Oscara o około 13,73 punktu procentowego, przy charakterystykach na poziomie średnich w próbie, 
+\item Wzrost liczby Złotych Globów o jednostkę powoduje wzrost prawdopodobieństwa zdobycia Oscara o około 65,67 punktu procentowego, przy charakterystykach na poziomie średnich w próbie,
+\item Wzrost liczby nagród BAFTA o jednostkę powoduje wzrost prawdopodobieństwa zdobycia Oscara o około 42,91 punktu procentowego, przy charakterystykach na poziomie średnich w próbie,
+\end{itemize}
+
+Efekty cząstkowe dla niektórych zmiennych takich jak zlote_globy, cz bafta mogą wydawać się zadziwiająco wysokie. Wynika to z faktu, iż są one obliczane dla wartości średnich zmiennych niezależnych, co sprawia, iż dla faktycznie zaobserwowanych wartości mogą się one znacząco różnić. 
+
+\vspace{0.5cm}
+\textbf{Tabela 54. Efekty cząstkowe Logit i Probit}
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{2}{c}}
+\hline\hline
+            &\multicolumn{1}{c}{Logit}&\multicolumn{1}{c}{Probit}\\
+\hline
+\_Igatunek\_2 &       0.112\sym{**}  &       0.120\sym{**}  \\
+\addlinespace
+kraj\_produkcji &     -0.0362\sym{***} &     -0.0459\sym{***} \\
+\addlinespace
+przychody2000&    4.86e-11\sym{**}  &    5.62e-11\sym{**}  \\
+\addlinespace
+ln\_nom      &       0.1071\sym{***}&       0.1373\sym{***}\\
+\addlinespace
+ln\_zg       &      0.5097\sym{**}  &       0.6567\sym{***} \\
+\addlinespace
+ln\_baf      &      0.3304\sym{***}&       0.4291\sym{***}\\
+\addlinespace
+milosc   &      0.0830\sym{**}  &      0.0862\sym{**}  \\
+\hline\hline
+\multicolumn{3}{l}{\footnotesize \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}
+\textit{\footnotesize{Źródło: Opracowanie własne.}} \\
+
+Efekty cząstkowe w modelu Probit dla wszystkich zmiennych niezależnych okazały się wyższe niż efekty cząstkowe w modelu Logit. W związku z tym, iż jako lepiej dopasowany model uznany został Probit to jego oszacowania powinny być przede wszystkim brane pod uwagę przy weryfikacji hipotez badawczych. Ciekawym przypadkiem do interpretacji jest zmienna przychody2000, pomimo, iż jest ona istotna w obu modelach na 5\%-owym poziomie istotności to jednak jej oszacowany wpływ na prawdopodobieństwo zdobycia Oscara jest minimalny - przy przychodach z kas biletowych na poziomie średnim z próby (1,61 mln dolarów) zmienna ta wpływa na prawdopodobieństwo badanego zjawiska z siłą słabszą niż 1 punkt procentowy (około 0,8 pp). 
+
+W załączniku nr 2 do niniejszej pracy znajduje się tabela z efektami cząstkowymi najważniejszych modeli LMP, Logit i Probit oszacowanych w tej pracy. Dzięki efektom cząstkowym można te modele bezpośrednio porównywać. 
+
+
+
+
+

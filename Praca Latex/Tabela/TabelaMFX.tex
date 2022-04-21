@@ -1,0 +1,69 @@
+\scriptsize{
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\tabcolsep}{0.2cm}				% definiuje szerokość między kolumnami 
+\renewcommand{\arraystretch}{1}
+
+\begin{longtable}{c*{8}{p{1.5cm}p{2.5cm}}}
+\toprule
+\toprule
+\addlinespace
+&\multicolumn{3}{c}{Logit}&\multicolumn{3}{c}{Probit}&\multicolumn{2}{c}{Liniowy Model Prawdopodobieństwa (LMP)}\\\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-9}&\multicolumn{1}{c}{Logit Ogólny}&\multicolumn{1}{c}{Logit Zagnieżdżony} &\multicolumn{1}{c}{Logit po transformacji}&\multicolumn{1}{c}{Probit Ogólny}&\multicolumn{1}{c}{Probit Zagnieżdżony}&\multicolumn{1}{c}{Probit po transformacji}&\multicolumn{1}{c}{LMP Ogólny}&\multicolumn{1}{c}{LMP Zagnieżdżony}\\
+\addlinespace
+\midrule
+\midrule
+\addlinespace
+\midrule
+\multicolumn{1}{c}{budzet2000}          &   \multicolumn{1}{c}{-1.12e-10}   &               &               &   \multicolumn{1}{c}{-2.10e-10}   &               &               &   \multicolumn{1}{c}{-7.00e-11}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_1}       &    \multicolumn{1}{c}{-0.00973}   &               &               &     \multicolumn{1}{c}{-0.0134}   &               &               &     \multicolumn{1}{c}{-0.0110}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_2}     &      \multicolumn{1}{c}{0.0613}  &      \multicolumn{1}{c}{\textbf{0.0896\sym{***}}}  &       \multicolumn{1}{c}{\textbf{0.112\sym{***}}} &      \multicolumn{1}{c}{0.0680}   &      \multicolumn{1}{c}{\textbf{0.0895\sym{**}}}  &       \multicolumn{1}{c}{\textbf{0.120\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0654\sym{**}}} &      \multicolumn{1}{c}{\textbf{0.0756\sym{***}}}\\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_3}      &      \multicolumn{1}{c}{0.0504}   &               &               &      \multicolumn{1}{c}{0.0432}   &               &               &      \multicolumn{1}{c}{0.0277}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_4}       &     \multicolumn{1}{c}{-0.0202}   &               &               &     \multicolumn{1}{c}{-0.0238}   &               &               &     \multicolumn{1}{c}{-0.0365}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_5}     &      \multicolumn{1}{c}{0.0211)}   &               &               &      \multicolumn{1}{c}{0.0219}   &               &               &      \multicolumn{1}{c}{0.0179}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_6}      &      \multicolumn{1}{c}{0.0572}   &               &               &      \multicolumn{1}{c}{0.0494}   &               &               &      \multicolumn{1}{c}{\textbf{0.0440}\sym{*}}   &      \multicolumn{1}{c}{\textbf{0.0504\sym{**}}} \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_7}     &    \multicolumn{1}{c}{0.000620}   &               &               &    \multicolumn{1}{c}{-0.00189}   &               &               &     \multicolumn{1}{c}{0.00285}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_8}      &     \multicolumn{1}{c}{0.00437}   &               &               &    \multicolumn{1}{c}{-0.00240}   &               &               &    \multicolumn{1}{c}{-0.00567}   &               \\
+\addlinespace
+\multicolumn{1}{c}{\_Igatunek\_9)}      &     \multicolumn{1}{c}{-0.0174}   &               &               &     \multicolumn{1}{c}{-0.0240}   &               &               &     \multicolumn{1}{c}{-0.0389}   &               \\
+\addlinespace
+\multicolumn{1}{c}{ekranizacja}       &    \multicolumn{1}{c}{-0.00606}   &               &               &    \multicolumn{1}{c}{-0.00466}   &               &               &    \multicolumn{1}{c}{-0.00991}   &               \\
+\addlinespace
+\multicolumn{1}{c}{roi}                 & \multicolumn{1}{c}{-0.00000579}   &               &               & \multicolumn{1}{c}{-0.00000504}   &               &               &   \multicolumn{1}{c}{-1.84e-08}   &               \\
+\addlinespace
+\multicolumn{1}{c}{przychody2000}       &    \multicolumn{1}{c}{\textbf{9.16e-11\sym{**}}} &    \multicolumn{1}{c}{\textbf{6.80e-11\sym{***}}} &    \multicolumn{1}{c}{\textbf{4.86e-11\sym{**}}} &    \multicolumn{1}{c}{\textbf{1.06e-10\sym{**}}} &    \multicolumn{1}{c}{\textbf{7.56e-11\sym{***}}} &    \multicolumn{1}{c}{\textbf{5.62e-11\sym{**}}} &    \multicolumn{1}{c}{4.56e-11}  &               \\
+\addlinespace
+\multicolumn{1}{c}{kraj\_produkcji}   &     \multicolumn{1}{c}{\textbf{-0.0336\sym{***}}} &     \multicolumn{1}{c}{\textbf{-0.0403\sym{***}}} &     \multicolumn{1}{c}{\textbf{-0.0362\sym{***}}} &     \multicolumn{1}{c}{\textbf{-0.0405\sym{***}}} &     \multicolumn{1}{c}{\textbf{-0.0461\sym{***}}} &     \multicolumn{1}{c}{\textbf{-0.0459\sym{***}}} &     \multicolumn{1}{c}{\textbf{-0.0278\sym{**}}} &     \multicolumn{1}{c}{\textbf{-0.0262\sym{**}}} \\
+\addlinespace
+\multicolumn{1}{c}{nominacje}           &      \multicolumn{1}{c}{\textbf{0.0311\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0352\sym{***}}} &               &      \multicolumn{1}{c}{\textbf{0.0394\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0426\sym{***}}} &               &      \multicolumn{1}{c}{\textbf{0.0812\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0826\sym{***}}} \\
+\addlinespace
+\multicolumn{1}{c}{zlote\_globy}         &      \multicolumn{1}{c}{\textbf{0.0741\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0854\sym{***}}} &               &      \multicolumn{1}{c}{\textbf{0.0826\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0921\sym{***}}} &               &      \multicolumn{1}{c}{\textbf{0.0746\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0748\sym{***}}} \\
+\addlinespace
+\multicolumn{1}{c}{bafta}               &      \multicolumn{1}{c}{\textbf{0.0312\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0398\sym{***}}} &               &      \multicolumn{1}{c}{\textbf{0.0386\sym{***}}}&      \multicolumn{1}{c}{\textbf{0.0461\sym{***}}} &               &      \multicolumn{1}{c}{\textbf{0.0487\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0491\sym{***}}} \\
+\addlinespace
+\multicolumn{1}{c}{milosc}           &     \multicolumn{1}{c}{\textbf{0.0858\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0808\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0830\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0893\sym{***}}} &     \multicolumn{1}{c}{\textbf{0.0827\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0862\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0560\sym{***}}} &      \multicolumn{1}{c}{\textbf{0.0496\sym{**}}} \\
+\addlinespace
+\multicolumn{1}{c}{Czas\_trwania}        &   \multicolumn{1}{c}{-0.000288}   &               &               &   \multicolumn{1}{c}{-0.000376}   &               &               &   \multicolumn{1}{c}{\textbf{-0.000768\sym{**}}} &   \multicolumn{1}{c}{\textbf{-0.000737\sym{***}}} \\
+\addlinespace
+\multicolumn{1}{c}{ln\_nom$^{[1]}$}              &               &               &       \multicolumn{1}{c}{\textbf{0.124\sym{***}}} &               &               &       \multicolumn{1}{c}{\textbf{0.159\sym{***}}} &               &               \\
+\addlinespace
+\multicolumn{1}{c}{ln\_zg$^{[2]}$}               &               &               &      \multicolumn{1}{c}{\textbf{0.0972\sym{***}}} &               &               &       \multicolumn{1}{c}{\textbf{0.125\sym{***}}} &               &               \\
+\addlinespace
+\multicolumn{1}{c}{ln\_baf$^{[3]}$}              &               &               &      \multicolumn{1}{c}{\textbf{0.0822\sym{***}}} &               &               &       \multicolumn{1}{c}{\textbf{0.107\sym{***}}} &               &               \\
+\midrule
+\addlinespace
+\midrule
+\addlinespace
+\multicolumn{9}{l}{\scriptsize Liczba gwiazdek przy zmiennej oznacza, że dana zmienna jest istotna na odpowiednim poziomie istotności: 10\% (\sym{*}), 5\% (\sym{**}), 1\% (\sym{***}).}\\ 
+\multicolumn{9}{l}{\scriptsize [1][2][3] Aby uzyskać efekty cząstkowe dla zmiennych niezlogarytmowanych należy podzielić oszacowania w tabeli przez wartości średnie zmiennych nominacje, zlote_globy i bafta.}\\
+\multicolumn{9}{l}{\scriptsize Źródło: Opracowanie własne.}\\
+\end{longtable}
+}
+}

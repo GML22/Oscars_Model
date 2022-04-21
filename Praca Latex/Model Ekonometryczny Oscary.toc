@@ -1,0 +1,28 @@
+\select@language {polish}
+\contentsline {chapter}{Streszczenie}{3}{chapter*.2}
+\contentsline {chapter}{Wstęp}{4}{chapter*.3}
+\contentsline {chapter}{1. Podstawy teoretyczne modelu}{5}{chapter*.4}
+\contentsline {section}{1.1 Literatura poruszająca problem}{5}{section*.5}
+\contentsline {section}{1.2 Hipotezy badawcze}{7}{section*.6}
+\contentsline {chapter}{2. Opis zbioru danych i definicje zmiennych}{9}{chapter*.7}
+\contentsline {section}{2.1 Baza danych}{9}{section*.8}
+\contentsline {section}{2.2 Charakterystyka zmiennych}{10}{section*.9}
+\contentsline {subsection}{2.2.1 Zmienna zależna}{10}{section*.10}
+\contentsline {subsection}{2.2.2 Zmienne niezależne}{10}{section*.11}
+\contentsline {chapter}{3. Oszacowania modeli}{18}{chapter*.15}
+\contentsline {section}{3.1 Liniowy Model Prawdopodobieństwa}{18}{section*.16}
+\contentsline {section}{3.2 Model Logit}{22}{section*.18}
+\contentsline {subsection}{3.2.1 Diagnostyka modelu Logit i testy jakości dopasowania}{24}{section*.19}
+\contentsline {section}{3.3 Model Probit}{31}{section*.22}
+\contentsline {subsection}{3.3.1 Diagnostyka modelu Probit i testy jakości dopasowania}{33}{section*.23}
+\contentsline {section}{3.4 Wyb\'or najlepszego modelu}{40}{section*.26}
+\contentsline {chapter}{4. Interpretacja wynik\'ow}{42}{chapter*.28}
+\contentsline {section}{4.1. Interpretacja znak\'ow przy parametrach modeli}{42}{section*.29}
+\contentsline {section}{4.2. Efekty cząstkowe w modelach Logit i Probit}{43}{section*.30}
+\contentsline {subsection}{4.2.1. Model Logit}{43}{equation.0.0.4}
+\contentsline {subsection}{4.2.1. Model Probit}{45}{section*.32}
+\contentsline {chapter}{5. Wnioski końcowe}{48}{chapter*.33}
+\contentsline {chapter}{Bibliografia}{50}{chapter*.34}
+\contentsline {chapter}{Załączniki}{51}{chapter*.35}
+\contentsline {section}{Załącznik 1. Oszacowanie parametr\'ow modeli LMP, Logit i Probit}{52}{section*.36}
+\contentsline {section}{Załącznik 2. Efekty cząstkowe modeli LMP, Logit i Probit}{54}{section*.37}
