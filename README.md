@@ -11,5 +11,13 @@ Histogram        |  ROC Curve     |  Sensitivity Specificity Curves
 ![](/imgs/hist.png)  |  ![](/imgs/roc.png) |  ![](/imgs/spec_sens.png)
 
 <p align="justify">
-The 
+This thesis addresses the issue of factors affecting the likelihood of winning an Oscar. The first chapters are devoted to a literature review of the problem, the hypotheses of the study and the definition of the variables and the data set. In the following parts of the paper, three econometric models are presented that can be used to estimate the phenomenon under study, they are: Linear Probability Model, Logit Model and Probit Model. For the models that best represent the input data, interpretation and verification of research hypotheses is carried out. The last chapter of this thesis focuses on drawing appropriate conclusions from the conducted research.
+</p>
+
+<p align="center">
+  <img width=60% height=60% src="/imgs/konkurs.png"/>
+</p>
+
+<p align="center">
+  <img width=75% height=75% src="/imgs/models_results.png"/>
 </p>
