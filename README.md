@@ -3,7 +3,7 @@
 *[This project was completed in June 2013]*
 
 <p align="justify">
-"And the Oscar goes to... Analysis of economic and non-economic factors affecting the probability of winning an Oscar" paper that addresses the issue of factors affecting the likelihood of winning an Oscar. The first chapters of this paper are devoted to a literature review of the problem, the hypotheses of the study and the definition of the variables and the data set. In the following parts of the paper, three econometric models are presented that can be used to estimate the phenomenon under study, they are: Linear Probability Model, Logit Model and Probit Model. For the models that best represent the input data, interpretation and verification of research hypotheses is carried out.
+"And the Oscar goes to... Analysis of economic and non-economic factors affecting the probability of winning an Oscar" is a paper that addresses the issue of factors affecting the likelihood of winning an Oscar. The first chapters of this paper are devoted to a literature review of the problem, the hypotheses of the study and the definition of the variables and the data set. In the following parts of the paper, three econometric models are presented that can be used to estimate the phenomenon under study, they are: Linear Probability Model, Logit Model and Probit Model. For the models that best represent the input data, interpretation and verification of research hypotheses is carried out.
 </p>
 
 Variable Histogram        |  ROC Curves     |  Sensitivity Specificity Curves
