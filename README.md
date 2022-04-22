@@ -19,7 +19,7 @@ Variable Histogram        |  ROC Curves     |  Sensitivity Specificity Curves
 </p>
 
 <p align="justify">
-The results of the analysis conducted in this paper indicate that a limited number of factors influence the likelihood of winning an Oscar, the most important of which are those relating to other awards and nominations for a given film. These conclusions are in line with those found in the literature on the issue under study. The main factors influencing the likelihood of winning the most important statuette in the film world are: film genre, country of production, box office revenues, number of Oscar nominations, number of Golden Golden Globes, the number of British Academy of Film and Television Arts awards won, and whether the film has a leading love theme.
+The results of the analysis conducted in this paper indicate that a limited number of factors influence the likelihood of winning an Oscar, the most important of which are those related to other awards and nominations for a given film. These conclusions are in line with those found in the literature on the issue under study. The main factors influencing the likelihood of winning the most important statuette in the film world are: film genre, country of production, box office revenues, number of Oscar nominations, number of Golden Golden Globes, the number of British Academy of Film and Television Arts awards won, and whether the film has a leading love theme.
 </p>
 
 <p align="center">
