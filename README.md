@@ -11,7 +11,7 @@ Variables Histograms        |  ROC Curves     |  Sensitivity-Specificity Curves
 ![](/imgs/hist.png)  |  ![](/imgs/roc.png) |  ![](/imgs/spec_sens.png)
 
 <p align="justify">
-The model presented in this reasearch paper won first place in the contest for the best econometric model in year 2013 at the graduate studies of the Faculty of Economic Sciences of the University of Warsaw: http://www.ekonometria.wne.uw.edu.pl/index.php?n=Main.Konkurs2013
+The model presented in this reasearch paper won the first place in the contest for the best econometric model in year 2013 at the graduate studies of the Faculty of Economic Sciences of the University of Warsaw: http://www.ekonometria.wne.uw.edu.pl/index.php?n=Main.Konkurs2013
 </p>
 
 <p align="center">
