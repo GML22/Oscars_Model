@@ -25,3 +25,5 @@ The results of the analysis conducted in this paper indicate that a limited numb
 <p align="center">
   <img width=75% height=75% src="/imgs/models_results.png"/>
 </p>
+
+This paper was written as a final project on Advanced Econometrics course at the graduate studies of the Faculty of Economic Sciences of the University of Warsaw.
